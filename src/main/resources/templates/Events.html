@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+  xmlns:th="http://www.thymeleaf.org">
+        <head>
+                <meta charset="utf-8">
+                <!--Form title-->
+                <title>Events Registration</title>
+                <link type="text/css" th:href="@{/css/index.css}" rel="stylesheet"/>
+<link type="text/css" th:href="@{/css/login.css}" rel="stylesheet"/>
+  <link type="text/css" th:href="@{/css/sweetalert2.min.css}" rel="stylesheet"></link>  
+    <script type="text/javascript" th:src="@{/js/sweetalert2.all.min.js}"></script>
+    <script th:src="@{/js/index.js}"></script>
+            </head>
+            <body>
+              
+                    <!--NavBar-->
+
+<!-- Include header -->
+ <th:block th:include="/fragments/header"></th:block>
+
+
+                <!--Create  a Form -->
+                 
+                     <!-- <h4 class="w3-label w3-text-blue">Student Registration Form</h4> -->
+                       <!--  <fieldset class="w3-container w3-padding-64">  -->
+            <div  class="w3-container w3-padding-64 w3-card-4" >
+              <header class="w3-container w3-black  w3-opacity">
+  <h3>Please Register Event Here</h3>
+</header>
+                <!-- <h2 class="w3-text-blue"> Please Log In</h2>
+                 -->
+                
+                <form action="#" th:action="@{/student/student}" th:object="${student}" method="post">
+                
+                        <h3 id="error"></h3>
+                       <label class="w3-label w3-text-blue">Event Name</label> 
+                       <input type="text" class="w3-input w3-border"  th:field="*{event_name}" placeholder="e.g Kabuye Charles" id="name" >
+                     <label class="w3-label w3-text-blue">Facilitator</label> 
+                       <input type="text" class="w3-input w3-border"  th:field="*{facilitator}" placeholder="e.g Mr .."  id="std_id"  >
+                     <label class="w3-label w3-text-blue">Fee</label>   
+             <input type="text" class="w3-input w3-border"  th:field="*{fee}" placeholder="e.g Mr .."  id="std_id"  >
+         
+                        <label class="w3-label w3-text-blue">Location</label> 
+                         <input type="text" class="w3-input w3-border"  th:field="*{location}" placeholder="e.g Masaka"  id="std_id"  >
+         
+                                <label class="w3-label w3-text-blue">Start Date</label>
+                          <input type="text" class="w3-input  w3-border" th:field="*{start_date}" placeholder="e.g 12/June/2019" id="contact"/>
+                          
+              <label class="w3-label w3-text-blue">Topic</label> 
+                         <input type="text" class="w3-input w3-border"  th:field="*{topic}" placeholder="e.g Business"  id="std_id"  >
+                      
+                   <p> 
+                               
+                        <input type="submit"  class="w3-btn w3-ripple w3-green" value="Save Events  Data" onclick=""> 
+                      </p> 
+                </form>
+ 
+                  </div>
+             
+  
+      <th:block th:include="/fragments/footer"></th:block>
+      
+ </body>
+</html>
