@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="queries.css">
+    <script src="js/index.js"></script>
 </head>
-<body>
-<!-- 	 top header-->
+<body onload="showBox();">
+    <!-- Top header starts here -->
     <header class="top_header">
         <a>Imuka Access</a>
     </header>
-<!--navigation bar starts here 	 -->
+    <!-- Navigation bar -->
     <nav class="navigation">
         <ul>
             <li>
@@ -44,7 +46,7 @@
                         </li>
         </ul>
     </nav>
-<!--the search bar section 	 -->
+    <!-- search bar section -->
    <section class="search_section"> 
     <div class="search_container">
         <form>
@@ -67,16 +69,17 @@
         </form>
     </div>
    </section>
-<!--Heading container for top categories     -->
+   <!-- top categories heading container -->
   <div class="heading_container">
       <a>
           Top Categories
       </a>
   </div>
-<!--category container conatining the 5 category tiles  -->
+  <!-- category tiles container -->
   <section class="category_container">
+      <!-- Events tile -->
       <div class="category_tile a">
-          <a href="#">
+          <a href="#Events">
           <div>
             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -108,7 +111,7 @@
           </a>
       </div>
 
-
+<!-- Workshops tile -->
       <div class="category_tile b">
             <a href="">
                     <div>
@@ -116,12 +119,13 @@
           
                     </div>
                     <div>
-                      <a href="">
+                      <a href="#workshops">
                           Workshops
                       </a>
                     </div>
                     </a>
       </div>
+      <!-- visit opportunities tile -->
       <div class="category_tile c">
             <a href="">
                     <div>
@@ -157,12 +161,13 @@
           
                     </div>
                     <div>
-                      <a href="">
+                      <a href="#visits">
                           visit opportunities
                       </a>
                     </div>
                     </a>
       </div>
+      <!-- trainig sessions tile -->
       <div class="category_tile d">
             <a href="">
                     <div>
@@ -206,7 +211,7 @@
           
                     </div>
                     <div>
-                      <a href="">
+                      <a href="#trainings">
                           Training sessions
                       </a>
                     </div>
@@ -267,14 +272,14 @@
           
                     </div>
                     <div>
-                      <a href="">
+                      <a href="#funding_opportunities">
                           Funding opportunities
                       </a>
                     </div>
                     </a>
       </div>
   </section>
-<!-- heading container deals heading	       -->
+  <!-- deals section -->
   <header class="heading_container deals_heading">
 
  <a>DEALS OF THE DAY</a>
@@ -294,7 +299,7 @@
     </svg>
     </a>
 </div>
-<!--Deals tiles contaniner  -->
+
   <section class="deals_container">
      
       <div class="colm1">
@@ -313,7 +318,8 @@
             
           </div>
     </section>
-  <div class="heading_container funding_header">
+    <!-- funding opportunities section -->
+  <div class="heading_container funding_header" id="fundingOpportunities">
       <a>
           Funding Opportunities
       </a>
@@ -332,7 +338,6 @@
         </svg>
         </a>
     </div>
-<!--funding opportunity section starts here 	       -->
   <section class="fund_opportunity_conatiner">
     <div class="tile1">
         <div class="inner">
@@ -368,5 +373,424 @@
             
     </div>
   </section>
+  <!-- upcoming events section -->
+  <div class="heading_container funding_header" id="Events">
+        <a>
+            Upcoming Events
+        </a>
+    </div>
+    <div class="more_container">
+          
+          <a class="" href="">
+          see more   
+         
+              
+           <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+          <g>
+          <polygon points="10.2,29.7 8.8,28.3 21.1,16 8.8,3.7 10.2,2.3 23.9,16 	"/>
+          </g>
+          </svg>
+          </a>
+      </div>
+  <section class="colm_rw">
+    <div class="tile">
+
+    </div>
+    <div class="tile">
+
+    </div>
+    <div class="tile">
+
+    </div>
+    <div class="tile">
+
+    </div>
+    <div class="tile">
+
+    </div>
+  </section>
+  <!-- workshops section -->
+  <div class="header" id="workshops">
+      <a>
+          Workshops
+      </a>
+  </div>
+
+  <div class="more_container">
+          
+        <a class="" href="">
+        see more   
+       
+            
+         <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+        <g>
+        <polygon points="10.2,29.7 8.8,28.3 21.1,16 8.8,3.7 10.2,2.3 23.9,16 	"/>
+        </g>
+        </svg>
+        </a>
+    </div>
+    <section class="colm_rw">
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+    </section>
+    <!-- visit opportunities section -->
+    <div class="header" id="visits">
+        <a>
+            visit opportunities
+        </a>
+    </div>
+    <div class="more_container">
+          
+            <a class="" href="">
+            see more   
+           
+                
+             <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+            <g>
+            <polygon points="10.2,29.7 8.8,28.3 21.1,16 8.8,3.7 10.2,2.3 23.9,16 	"/>
+            </g>
+            </svg>
+            </a>
+        </div>
+    <section class="colm_rw">
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+    </section>
+    <!-- training sessions section -->
+    <div class="header" id="trainings">
+            <a>
+                Training sessions
+            </a>
+        </div>
+        <div class="more_container">
+              
+                <a class="" href="">
+                see more   
+               
+                    
+                 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+                <g>
+                <polygon points="10.2,29.7 8.8,28.3 21.1,16 8.8,3.7 10.2,2.3 23.9,16 	"/>
+                </g>
+                </svg>
+                </a>
+            </div>
+        <section class="colm_rw">
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+        </section>
+        <!-- funding opportunities section -->
+        <div class="header" id="funding_opportunities">
+                <a>
+                    funding opportunities
+                </a>
+            </div>
+            <div class="more_container">
+                  
+                    <a class="" href="">
+                    see more   
+                   
+                        
+                     <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+                    <g>
+                    <polygon points="10.2,29.7 8.8,28.3 21.1,16 8.8,3.7 10.2,2.3 23.9,16 	"/>
+                    </g>
+                    </svg>
+                    </a>
+                </div>
+            <section class="colm_rw">
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+            </section>
+<footer class="bottom_nav_mobile">
+<table>
+    <tr>
+        <td>
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<g>
+	<g>
+		<path d="M506.555,208.064L263.859,30.367c-4.68-3.426-11.038-3.426-15.716,0L5.445,208.064
+			c-5.928,4.341-7.216,12.665-2.875,18.593s12.666,7.214,18.593,2.875L256,57.588l234.837,171.943c2.368,1.735,5.12,2.57,7.848,2.57
+			c4.096,0,8.138-1.885,10.744-5.445C513.771,220.729,512.483,212.405,506.555,208.064z"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path d="M442.246,232.543c-7.346,0-13.303,5.956-13.303,13.303v211.749H322.521V342.009c0-36.68-29.842-66.52-66.52-66.52
+			s-66.52,29.842-66.52,66.52v115.587H83.058V245.847c0-7.347-5.957-13.303-13.303-13.303s-13.303,5.956-13.303,13.303v225.053
+			c0,7.347,5.957,13.303,13.303,13.303h133.029c6.996,0,12.721-5.405,13.251-12.267c0.032-0.311,0.052-0.651,0.052-1.036v-128.89
+			c0-22.009,17.905-39.914,39.914-39.914s39.914,17.906,39.914,39.914v128.89c0,0.383,0.02,0.717,0.052,1.024
+			c0.524,6.867,6.251,12.279,13.251,12.279h133.029c7.347,0,13.303-5.956,13.303-13.303V245.847
+			C455.549,238.499,449.593,232.543,442.246,232.543z"/>
+	</g>
+</g>
+
+</svg>
+
+        </td>
+        <td>
+            <svg version="1.1" id="list" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+       <g>
+           <g>
+               <rect x="8" y="15" fill="#1D1D1B" width="21" height="2"/>
+           </g>
+           <g>
+               <rect x="8" y="9.2" fill="#1D1D1B" width="21" height="2"/>
+           </g>
+           <g>
+               <rect x="8" y="20.8" fill="#1D1D1B" width="21" height="2"/>
+           </g>
+       </g>
+       <g>
+           <g>
+               <rect x="3" y="15" fill="#1D1D1B" width="2" height="2"/>
+           </g>
+           <g>
+               <rect x="3" y="9.2" fill="#1D1D1B" width="2" height="2"/>
+           </g>
+           <g>
+               <rect x="3" y="20.8" fill="#1D1D1B" width="2" height="2"/>
+           </g>
+       </g>
+       </svg>
+       
+        </td>
+        <td>
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+							viewBox="0 0 258.75 258.75" style="enable-background:new 0 0 258.75 258.75;" xml:space="preserve">
+					   <g>
+						   <circle cx="129.375" cy="60" r="60"/>
+						   <path d="M129.375,150c-60.061,0-108.75,48.689-108.75,108.75h217.5C238.125,198.689,189.436,150,129.375,150z"/>
+					   </g>
+					  
+					   </svg>
+						   
+        </td>
+        <td>
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 473 473" style="enable-background:new 0 0 473 473;" xml:space="preserve">
+<g>
+	<g>
+		<path d="M403.581,69.3c-44.7-44.7-104-69.3-167.2-69.3s-122.5,24.6-167.2,69.3c-86.4,86.4-92.4,224.7-14.9,318
+			c-7.6,15.3-19.8,33.1-37.9,42c-8.7,4.3-13.6,13.6-12.1,23.2s8.9,17.1,18.5,18.6c4.5,0.7,10.9,1.4,18.7,1.4
+			c20.9,0,51.7-4.9,83.2-27.6c35.1,18.9,73.5,28.1,111.6,28.1c61.2,0,121.8-23.7,167.4-69.3c44.7-44.7,69.3-104,69.3-167.2
+			S448.281,114,403.581,69.3z M384.481,384.6c-67.5,67.5-172,80.9-254.2,32.6c-5.4-3.2-12.1-2.2-16.4,2.1c-0.4,0.2-0.8,0.5-1.1,0.8
+			c-27.1,21-53.7,25.4-71.3,25.4h-0.1c20.3-14.8,33.1-36.8,40.6-53.9c1.2-2.9,1.4-5.9,0.7-8.7c-0.3-2.7-1.4-5.4-3.3-7.6
+			c-73.2-82.7-69.4-208.7,8.8-286.9c81.7-81.7,214.6-81.7,296.2,0C466.181,170.1,466.181,302.9,384.481,384.6z"/>
+		<circle cx="236.381" cy="236.5" r="16.6"/>
+		<circle cx="321.981" cy="236.5" r="16.6"/>
+		<circle cx="150.781" cy="236.5" r="16.6"/>
+	</g>
+
+</svg>
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+          <a href="">
+              Home
+          </a>  
+        </td>
+        <td>
+            <a href="">
+                categories
+            </a>
+        </td>
+        <td>
+            <a href="">
+                Account
+            </a>
+        </td>
+        <td>
+            <a href="">
+                Support
+            </a>
+        </td>
+    </tr>
+</table>
+</footer>
+<div id="popup_container">
+    <!-- <button onclick="hideBox();">
+        hey
+    </button> -->
+    <section class="wrapper">
+            <div class="content_container">
+                    <header>
+                        <p>
+                            Hello! welcome to Imuka Access
+                            <br>
+                            please fill up this info for a
+                            better experience
+                        </p>
+                    </header>
+                    
+                </div>
+
+                <div class="form_container">
+                    <header>
+                        <a>Complete To Proceed</a>
+                    </header>
+                    <form action="">
+                        <table>
+                        <tr>
+                            <td  class="table_colm">
+                                <label for="">
+                                    District
+                                </label>
+                            </td>
+                            <td class="table_colm">
+                                <select name="" id="" required>
+                                    <option value="">
+                                        Mbale
+                                    </option>
+                                    <option value="">
+                                        fort portal
+                                    </option>
+                                    <option value="">
+                                        Wakiso
+                                    </option>
+                                    <option value="">
+                                        Mubende
+                                    </option>
+                                    <option value="">
+                                        kibale
+                                    </option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="">
+                                    Gender
+                                </label>
+                            </td>
+                            <td>
+                                <select name="" id="" required>
+                                    <option value="">
+                                        female
+                                    </option>
+                                    <option value="">
+                                        male
+                                    </option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table_colm">
+                               <label for="">
+                                   Job
+                               </label>
+                            </td>
+                            <td class="table_colm">
+                                <select name="" id="" required>
+                                    <option value="">
+                                        Farmer
+                                    </option>
+                                    <option value="">
+                                        Plumber
+                                    </option>
+                                    <option value="">
+                                        Doctor
+                                    </option>
+                                    <option value="">
+                                        Carpenter
+                                    </option>
+                                    <option value="">
+                                        Teacher
+                                    </option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="">
+                                    Interests
+                                </label>
+                            </td>
+                            <td>
+                                <select name="" id="" required>
+                                    <option value="">
+                                        Diary farming
+                                    </option>
+                                    <option value="">
+                                        Marketing and Sales
+                                    </option>
+                                    <option value="">
+                                        food processing
+                                    </option>
+                                    <option value="">
+                                        coffee farming
+                                    </option>
+                                    <option value="">
+                                        hoticulture
+                                    </option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table_colm">
+                                <label for="">
+                                    monthly income
+                                </label>
+                            </td>
+                            <td class="table_colm">
+                                <select name="" id="" required>
+                                    <option value="">
+                                        ....
+                                    </option>
+                                    <option value="">
+                                        10 - 50,000
+                                    </option>
+                                    <option value="">
+                                        50,000 - 100,000
+                                    </option>
+                                    <option value="">
+                                        100,000 - 700,000
+                                    </option>
+                                    <option value="">
+                                        800,000 - 1,000,000
+                                    </option>
+                                    <option value="">
+
+                                    </option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            
+                        </tr>
+                        
+                        </table>
+                        <div class="button_container">
+                                <button onclick="hideBox();">
+                                        Done
+                                </button>
+                        </div>
+                       
+                    </form>
+                </div>
+    </section>
+    
+</div>
 </body>
 </html>

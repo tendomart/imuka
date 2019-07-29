@@ -175,7 +175,28 @@ a{
     -webkit-box-pack: center;
     color: white;
 }
-
+.header{
+    background: rgb(5, 5, 70);
+    color: white;
+    font-weight: unset;
+    margin: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 10px;
+  
+}
+.colm_rw{
+    display: -webkit-box;
+    -webkit-box-orient:horizontal;
+    -webkit-box-pack: center;
+}
+.tile{
+    width: 200px;
+    height: 200px;
+    background: rgb(5, 5, 70);
+    text-align: center;
+    margin: 10px;
+}
 .tile1{
     width: 200px;
     height: 200px;
@@ -225,4 +246,96 @@ li{
     border: 2px solid white;
     color: white;
     text-decoration: none;
+}
+.bottom_nav_mobile{
+    display: none;
+}
+#popup_container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: none;
+}
+.content_container{
+    width: 400px;
+    height: 500px;
+    background-image: url(images/vc1.jpg);
+    background-size: cover;
+    margin-left:280px;
+    text-align: center;
+    font-size: 25px;
+    color: blue;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    
+    
+}
+.form_container{
+    background:-webkit-linear-gradient(left,darkblue,#0066FF);
+    width: 400px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 5px;
+}
+.form_container header{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    
+}
+
+.wrapper{
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    margin-top:100px;
+   
+    
+}
+
+.table_colm tr{
+    padding: 10px;
+    background: red;
+}
+.form_container table{
+    width: 30vw;
+    margin-left: 10px;
+    margin-top: 50px;
+}
+.button_container{
+    text-align: center;
+    padding: 10px;
+}
+.button_container button{
+    width: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 0px;
+    background: white;
+    color: #0066FF;
+    outline: none;
+}
+label{
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+}
+select{
+    background: transparent;
+    padding: 10px;
+    border-top-right-radius: 20px;
+    color: white;
+    border-bottom-right-radius: 20px;
+    border: 2px solid white;
+    outline: none;
+}
+option{
+    background:blue;
+    border: 0px;
+    font-size: 15px;
 }
