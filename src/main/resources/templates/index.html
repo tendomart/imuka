@@ -10,10 +10,11 @@
     <!--"src/main/resources/templates/index.html"Reference css styling-->
               <link type="text/css" th:href="@{/css/index.css}" rel="stylesheet"/>
                 <link type="text/css" th:href="@{/css/queries.css}" rel="stylesheet"/>
- 
- <link type="text/css" th:href="@{/css/sweetalert2.min.css}" rel="stylesheet"></link>  
+  <link type="text/css" th:href="@{/css/sweetalert2.min.css}" rel="stylesheet"></link>  
     <script type="text/javascript" th:src="@{/js/sweetalert2.all.min.js}"></script>
-    <script th:src="@{/js/index.js}"></script>
+    <script type="text/javascript" th:src="@{/js/index.js}"></script>
+     <script type="text/javascript" th:src="@{/js/jquery-3.4.1.min.js}"></script>
+
 </head>
 <!-- <body onload="alert4()">  -->
 <body onload="showBox();">
@@ -70,12 +71,7 @@
             <td>
                 <input type="text" placeholder="Search Imuka">
             </td>
-<!--  
-<td><span><span/></td>
- <td>News <span class="w3-badge w3-green">6</span></td>
-<td><p>Comments <span class="w3-badge w3-red">8</span></p></td>
-<td><p>Updates <span class="w3-badge w3-dark-grey">9</span></p> </td> -->
-        </tr>
+      </tr>
         </table>
         </form>
     </div>
@@ -502,8 +498,8 @@
                         <p>
                             Hello! welcome to Imuka Access
                             <br>
-                            please fill up this info for a
-                            better experience
+                            please fill up this form
+                            to Help us Make the Service Better for you
                         </p>
                     </header>
                     
@@ -513,7 +509,11 @@
                     <header>
                         <a>Complete To Proceed</a>
                     </header>
-                    <form action="">
+             <!-- <form action="/imuka/guestJesusChristt" id="anonymous_user" method="post">
+                         -->      
+               <form action="#" th:action="@{/anonynm/}" th:object="${anonynmousGuest}" method="post">
+                
+                
                         <table>
                         <tr>
                             <td  class="table_colm">
@@ -522,14 +522,15 @@
                                 </label>
                             </td>
                             <td class="table_colm">
-                                <select name="" id="" required>
-                                    <option value="">
-                                        Mbale
+                                <select name="" id="district" required th:field="*{district}">
+                                 <option value="">- -Select- -</option>
+                                    <option value="Kibaale">
+                                        Kibaale
                                     </option>
-                                    <option value="">
-                                        fort portal
+                                    <option value="Hoima">
+                                       Hoima
                                     </option>
-                                    <option value="">
+                                    <option value="Wakiso">
                                         Wakiso
                                     </option>
                                     <option value="">
@@ -548,37 +549,40 @@
                                 </label>
                             </td>
                             <td>
-                                <select name="" id="" required>
-                                    <option value="">
-                                        female
+                                <select name="" id="gender" required th:field="*{gender}">
+                                <option value="">- - Select - -</option>
+                                    <option value="Male">
+                                        Male
                                     </option>
-                                    <option value="">
-                                        male
+                                    <option value="Female">
+                                        Female
                                     </option>
                                 </select>
                             </td>
                         </tr>
                         <tr>
                             <td class="table_colm">
+                           
                                <label for="">
                                    Job
                                </label>
                             </td>
                             <td class="table_colm">
-                                <select name="" id="" required>
-                                    <option value="">
+                                <select name="" id="job" required th:field="*{job}">
+                                <option value="">- - -</option>
+                                    <option value="Farmer">
                                         Farmer
                                     </option>
-                                    <option value="">
+                                    <option value="Plumber">
                                         Plumber
                                     </option>
-                                    <option value="">
+                                    <option value="Doctor">
                                         Doctor
                                     </option>
-                                    <option value="">
+                                    <option value=" Carpenter">
                                         Carpenter
                                     </option>
-                                    <option value="">
+                                    <option value="Teacher">
                                         Teacher
                                     </option>
                                 </select>
@@ -591,20 +595,21 @@
                                 </label>
                             </td>
                             <td>
-                                <select name="" id="" required>
-                                    <option value="">
+                                <select name="" id="sales" required th:field="*{interest}">
+                                <option value="">- -Select- -</option>
+                                    <option value="Diary farming">
                                         Diary farming
                                     </option>
-                                    <option value="">
+                                    <option value="Marketing and Sales">
                                         Marketing and Sales
                                     </option>
-                                    <option value="">
+                                    <option value="Food processing">
                                         food processing
                                     </option>
-                                    <option value="">
+                                    <option value="Coffee farming">
                                         coffee farming
                                     </option>
-                                    <option value="">
+                                    <option value="Hoticulture">
                                         hoticulture
                                     </option>
                                 </select>
@@ -617,14 +622,12 @@
                                 </label>
                             </td>
                             <td class="table_colm">
-                                <select name="" id="" required>
-                                    <option value="">
-                                        ....
-                                    </option>
-                                    <option value="">
+                                <select name="" id="income" required th:field="*{monthly_income}">
+                                    <option value="">- - -</option>
+                                    <option value="0 - 50,000">
                                         10 - 50,000
                                     </option>
-                                    <option value="">
+                                    <option value="50,000 - 100,000">
                                         50,000 - 100,000
                                     </option>
                                     <option value="">
@@ -645,7 +648,9 @@
                         
                         </table>
                         <div class="button_container">
-                                <button onclick="hideBox();">
+                                <!-- <button onclick="hideBox();">  -->
+                                <input id="submitButton" type="submit" value="Submit">
+                                 <button id="submitButton">
                                         Done
                                 </button>
                         </div>

@@ -34,8 +34,8 @@ public class AnonynmousGuestController extends BaseController<AnonynmousGuest>{
 		@GetMapping(value = "/")
 		@Override
 			public ModelAndView getForm(ModelAndView md) {
-			 md.addObject("anonynmoususer",new AnonynmousGuest());
-			md.setViewName("anonynmoususer");
+			 md.addObject("anonynmousGuest",new AnonynmousGuest());
+			md.setViewName("index");
 			return md;
 			}
 		@Override
@@ -47,11 +47,12 @@ public class AnonynmousGuestController extends BaseController<AnonynmousGuest>{
 				md.setViewName("403");
 	            return md;
 	        }
+			red.addFlashAttribute("message", "Success");
+	        red.addFlashAttribute("alertClass", "alert-success");
 	        anon.addItem(an);
 	        md.addObject("anonynmousGuest",new AnonynmousGuest());
-	       // md.setViewName("registerStudent");
-	        red.addFlashAttribute("message", "Success");
-	        red.addFlashAttribute("alertClass", "alert-success");
+	        md.setViewName("index");
+	        
 	        return md;
 			}
 		@Override

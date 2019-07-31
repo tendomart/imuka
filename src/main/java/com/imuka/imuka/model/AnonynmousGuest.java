@@ -1,6 +1,7 @@
 package com.imuka.imuka.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,7 +12,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "anonymous_guest")
-public class AnonynmousGuest extends AuditModel implements Serializable{
+//public class AnonynmousGuest extends AuditModel implements Serializable{
+	public class AnonynmousGuest  implements Serializable{
 
 	public AnonynmousGuest() {
 		super();
@@ -39,19 +41,19 @@ public class AnonynmousGuest extends AuditModel implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(name = "district")
+	@Column(name = "district", nullable = false)
 	public String district;
 	
-	@Column(name = "gender")
+	@Column(name = "gender", nullable = false)
 	public String gender;
 	
-	@Column(name = "job")
+	@Column(name = "job", nullable = false)
 	private String job;
 	
-	@Column(name = "interest")
+	@Column(name = "interest", nullable = false)
 	private String interest;
 	
-	@Column(name = "monthly_income")
+	@Column(name = "monthly_income", nullable = false)
 	private String monthly_income;
 
 	public Long getId() {
@@ -105,5 +107,17 @@ public class AnonynmousGuest extends AuditModel implements Serializable{
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+	
+//	@Override
+//	public Date getCreatedAt() {
+//		// TODO Auto-generated method stub
+//		return super.getCreatedAt();
+//	}
+//	
+//	@Override
+//	public void setCreatedAt(Date createdAt) {
+//		// TODO Auto-generated method stub
+//		super.setCreatedAt(createdAt);
+//	}
 	
 }

@@ -28,7 +28,7 @@ public class AuditModel implements Serializable{
 	private static final long serialVersionUID = -1316352189425189769L;
 
 	@Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "created_at", nullable = false, updatable = false)
+    @Column(name = "created_at", nullable = false, insertable = true,  updatable = false)
     @CreatedDate
     private Date createdAt;
 

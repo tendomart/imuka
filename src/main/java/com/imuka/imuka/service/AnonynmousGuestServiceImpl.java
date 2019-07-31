@@ -2,8 +2,10 @@ package com.imuka.imuka.service;
 
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.imuka.imuka.dao.AnonynmousGuestDaoImpl;
 import com.imuka.imuka.model.AnonynmousGuest;
@@ -12,10 +14,12 @@ import com.imuka.imuka.model.AnonynmousGuest;
  */
 
 @Service
+@Transactional
 @Qualifier("anonynmousGuestServiceImpl")
 public class AnonynmousGuestServiceImpl implements ImukaService<AnonynmousGuest>{
 
-AnonynmousGuestDaoImpl gs;
+@Autowired
+public AnonynmousGuestDaoImpl gs;
 	@Override
 	public Iterable<AnonynmousGuest> getAllItems() {
 		// TODO Auto-generated method stub
