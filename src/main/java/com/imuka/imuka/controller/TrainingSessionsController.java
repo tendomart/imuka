@@ -23,9 +23,9 @@ import com.imuka.imuka.service.ImukaService;
 @Controller
 @RequestMapping("training")
 public class TrainingSessionsController extends BaseController<TrainingSessionsController>{
-	private static final Logger log = LogManager.getLogger("com.imuka.farm.controller.TrainingSessionsController");
+	private static final Logger log = LogManager.getLogger("com.imuka.imuka.controller.TrainingSessionsController");
 
-	//install servicse
+	//install service
 	@Autowired(required = true)
 	@Qualifier(value = "trainingSessionsServiceImpl")
 	private ImukaService<TrainingSessions> tss;
@@ -46,7 +46,7 @@ public class TrainingSessionsController extends BaseController<TrainingSessionsC
             return md;
         }
         tss.addItem(ts);
-        md.addObject("events",new Events());
+        md.addObject("training",new TrainingSessions());
         red.addFlashAttribute("message", "Success");
         red.addFlashAttribute("alertClass", "alert-success");
         return md;

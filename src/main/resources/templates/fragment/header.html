@@ -21,6 +21,7 @@
 </div>  -->
    <!--Use External Javascript files-->  
     
+<link type="text/css" th:href="@{/css/indexButtons.css}" rel="stylesheet"/>
 <link type="text/css" th:href="@{/css/font-awesome.min.css}" rel="stylesheet"/>
 <link type="text/css" th:href="@{/css/sweetalert2.min.css}" rel="stylesheet"></link>
     
@@ -32,17 +33,15 @@
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" title="Toggle Navigation Menu">
       
     </a>
-     <a th:href="@{/main/}" href="/home" class="w3-bar-item w3-button">HOME</a>
-    <a th:href="@{#}" class="w3-bar-item w3-button w3-hide-small "> ABOUT ME</a>
-    <a th:href="@{/student/}"  class="w3-bar-item w3-button w3-hide-small ">Register Student</a>
-    <a  th:href="@{/pay/}" class="w3-bar-item w3-button w3-hide-small ">Record Payment</a>
-    <a  th:href="@{/pay/list}" class="w3-bar-item w3-button w3-hide-small ">Payment List</a>
+     <a th:href="@{/}" href="/home" class="w3-bar-item w3-button w3-green">HOME</a>
+    <a th:href="@{/events/}" class="w3-bar-item w3-button w3-hide-small "> EVENTS</a>
+    <a th:href="@{/funds/}"  class="w3-bar-item w3-button w3-hide-small ">FUNDING OPPORTUNITIES</a>
+    <a  th:href="@{/training/}" class="w3-bar-item w3-button w3-hide-small ">TRAINING SESSIONS</a>
+    <a  th:href="@{/workshop/}" class="w3-bar-item w3-button w3-hide-small ">WORKSHOPS</a>
    
-<a  th:href="@{/student/students/}" class="w3-bar-item w3-button w3-hide-small ">Student Lists</a>
+<a  th:href="@{/visit/}" class="w3-bar-item w3-button w3-hide-small ">VISIT OPPORTUNITIES</a>
     
-    <a  th:href="@{/main/accounts}" class="w3-bar-item w3-button w3-hide-small ">School Accounts</a>
-    
-    <a th:href="@{/}" class="w3-bar-item w3-button w3-hide-small ">Logout</a>
+    <a th:href="@{/}" class="w3-bar-item w3-button w3-hide-small  w3-red">Logout</a>
 
 
   </div>

@@ -16,7 +16,7 @@
                     <!--NavBar-->
 
 <!-- Include header -->
- <th:block th:include="/fragments/header"></th:block>
+ <th:block th:include="/fragment/header"></th:block>
 
 
                 <!--Create  a Form -->
@@ -25,18 +25,18 @@
                        <!--  <fieldset class="w3-container w3-padding-64">  -->
             <div  class="w3-container w3-padding-64 w3-card-4" >
               <header class="w3-container w3-black  w3-opacity">
-  <h3>Please Register Opportunities Here</h3>
+  <h3>Please Register Funding Opportunities Here</h3>
 </header>
                 <!-- <h2 class="w3-text-blue"> Please Log In</h2>
                  -->
                 
-                <form action="#" th:action="@{/student/student}" th:object="${student}" method="post">
+                <form action="#" th:action="@{/funds/}" th:object="${funds}" method="post">
                 
                         <h3 id="error"></h3>
                        <label class="w3-label w3-text-blue">Funder</label> 
                        <input type="text" class="w3-input w3-border"  th:field="*{funder}"  id="funder" >
                      <label class="w3-label w3-text-blue">Location</label> 
-                       <input type="text" class="w3-input w3-border"  th:field="*{location}" placeholder="e.g Kampala"  id="location  >
+                       <input type="text" class="w3-input w3-border"  th:field="*{location}" placeholder="e.g Kampala"  id="location">
                      
                      <label class="w3-label w3-text-blue">Organisation</label>   
              <input type="text" class="w3-input w3-border"  th:field="*{organisation}" placeholder="e.g Mr .."  id="organisation">
@@ -51,6 +51,6 @@
  
                   </div> 
   
-      <th:block th:include="/fragments/footer"></th:block>  
+      <th:block th:include="/fragment/footer"></th:block>  
  </body>
 </html>

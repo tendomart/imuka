@@ -16,7 +16,7 @@
                     <!--NavBar-->
 
 <!-- Include header -->
- <th:block th:include="/fragments/header"></th:block>
+ <th:block th:include="/fragment/header"></th:block>
 
 
             <div  class="w3-container w3-padding-64 w3-card-4" >
@@ -24,7 +24,7 @@
   <h3>Please Register Workshop Here</h3>
 </header>
                 
-                <form action="#" th:action="@{/student/student}" th:object="${student}" method="post">
+                <form action="#" th:action="@{/workshop/}" th:object="${workshop}" method="post">
                 
                         <h3 id="error"></h3>
                        <label class="w3-label w3-text-blue">Fee</label> 
@@ -57,6 +57,6 @@
  
                   </div> 
   
-      <th:block th:include="/fragments/footer"></th:block>  
+      <th:block th:include="/fragment/footer"></th:block>  
  </body>
 </html>

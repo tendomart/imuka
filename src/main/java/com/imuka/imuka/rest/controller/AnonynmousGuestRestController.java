@@ -33,12 +33,13 @@ import com.imuka.imuka.model.AnonynmousGuest;
 import com.imuka.imuka.service.ImukaService;
 
 @RestController
-@RequestMapping(value="/imuka")
+@RequestMapping(value="/rs")
 public class AnonynmousGuestRestController {
 	@Autowired(required = true)
 	@Qualifier(value = "anonynmousGuestServiceImpl")
 	private ImukaService<AnonynmousGuest> an;
 	
+	@Autowired
 	private AnonynmousGuestDaoImpl any;
 	//Get Guest By ID
 //	 @GetMapping("/guest/{id}")

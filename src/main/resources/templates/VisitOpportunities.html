@@ -16,7 +16,7 @@
                     <!--NavBar-->
 
 <!-- Include header -->
- <th:block th:include="/fragments/header"></th:block>
+ <th:block th:include="/fragment/header"></th:block>
 
 
             <div  class="w3-container w3-padding-64 w3-card-4" >
@@ -24,21 +24,21 @@
   <h3>Please Register Visit Here</h3>
 </header>
                 
-                <form action="#" th:action="@{/student/student}" th:object="${student}" method="post">
+                <form action="#" th:action="@{/visit/}" th:object="${visit}" method="post">
                 
                         <h3 id="error"></h3>
-                       <label class="w3-label w3-text-blue">Sector</label> 
-                       <input type="text" class="w3-input w3-border"  th:field="*{sector}"  id="sector" >
+                  <!--       <label class="w3-label w3-text-blue">Sector</label> 
+                       <input type="text" class="w3-input w3-border"  th:field="*{sector}"  id="sector" > -->
                     <label class="w3-label w3-text-blue">Fee</label> 
                        <input type="text" class="w3-input w3-border"  th:field="*{fee}"  id="fee" >
                     
                     
                      <label class="w3-label w3-text-blue">Agent</label> 
-                       <input type="text" class="w3-input w3-border"  th:field="*{agent}" placeholder="e.g D.H.O"  id="agent  >
+                       <input type="text" class="w3-input w3-border"  th:field="*{agent}" placeholder="e.g D.H.O"  id="agent"  >
                      
-                     <label class="w3-label w3-text-blue">Trainer</label>   
+                 <!--     <label class="w3-label w3-text-blue">Trainer</label>   
              <input type="text" class="w3-input w3-border"  th:field="*{trainer}" placeholder="e.g Mr .."  id="trainer"  >
-         
+         --> 
           <label class="w3-label w3-text-blue">Fee</label> 
                          <input type="text" class="w3-input w3-border"  th:field="*{fee}" placeholder="e.g 25,000/="  id="fee"  >
          
@@ -59,6 +59,6 @@
  
                   </div> 
   
-      <th:block th:include="/fragments/footer"></th:block>  
+      <th:block th:include="/fragment/footer"></th:block>  
  </body>
 </html>

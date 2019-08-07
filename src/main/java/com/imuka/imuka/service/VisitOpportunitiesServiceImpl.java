@@ -2,6 +2,7 @@ package com.imuka.imuka.service;
 
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +17,7 @@ import com.imuka.imuka.model.VisitOpportunities;
 @Service
 @Qualifier("visitOpportunitiesServiceImpl")
 public class VisitOpportunitiesServiceImpl implements ImukaService<VisitOpportunities> {
-
+@Autowired
 	VisitOpportunitiesDaoImpl vs;
 	
 	@Override

@@ -23,9 +23,9 @@ import com.imuka.imuka.service.ImukaService;
 @Controller
 @RequestMapping("workshop")
 public class WorkshopsController extends BaseController<Workshops>{
-	private static final Logger log = LogManager.getLogger("com.imuka.farm.controller.WorkshopsController");
+	private static final Logger log = LogManager.getLogger("com.imuka.imuka.controller.WorkshopsController");
 
-	//install servicse
+	//install service
 	@Autowired(required = true)
 	@Qualifier(value = "workshopsServiceImpl")
 	private ImukaService<Workshops> wk;
@@ -34,7 +34,7 @@ public class WorkshopsController extends BaseController<Workshops>{
 	@GetMapping(value = "/")
 	@Override
 		public ModelAndView getForm(ModelAndView md) {
-		 md.addObject("events",new Events());
+		 md.addObject("workshop",new Workshops());
 		md.setViewName("Workshops");
 		return md;
 		}
@@ -46,7 +46,7 @@ public class WorkshopsController extends BaseController<Workshops>{
             return md;
         }
         wk.addItem(w);
-        md.addObject("events",new Events());
+        md.addObject("events",new Workshops());
         red.addFlashAttribute("message", "Success");
         red.addFlashAttribute("alertClass", "alert-success");
         return md;

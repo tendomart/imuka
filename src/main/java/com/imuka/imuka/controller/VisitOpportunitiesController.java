@@ -23,7 +23,7 @@ import com.imuka.imuka.service.ImukaService;
 @Controller
 @RequestMapping("visit")
 public class VisitOpportunitiesController extends BaseController<VisitOpportunities>{
-	private static final Logger log = LogManager.getLogger("com.imuka.farm.controller.VisitOpportunities");
+	private static final Logger log = LogManager.getLogger("com.imuka.imuka.controller.VisitOpportunities");
 
 	//install servicse
 		@Autowired(required = true)
@@ -46,7 +46,7 @@ public class VisitOpportunitiesController extends BaseController<VisitOpportunit
 	            return md;
 	        }
 	        vos.addItem(vs);
-	        md.addObject("events",new Events());
+	        md.addObject("visit",new VisitOpportunities());
 	        red.addFlashAttribute("message", "Success");
 	        red.addFlashAttribute("alertClass", "alert-success");
 	        return md;

@@ -16,15 +16,15 @@
                     <!--NavBar-->
 
 <!-- Include header -->
- <th:block th:include="/fragments/header"></th:block>
+ <th:block th:include="/fragment/header"></th:block>
 
 
             <div  class="w3-container w3-padding-64 w3-card-4" >
               <header class="w3-container w3-black  w3-opacity">
-  <h3>Please Register Session Here</h3>
+  <h3>Please Register  Training Session Here</h3>
 </header>
                 
-                <form action="#" th:action="@{/student/student}" th:object="${student}" method="post">
+                <form action="#" th:action="@{/training/}" th:object="${training}" method="post">
                 
                         <h3 id="error"></h3>
                        <label class="w3-label w3-text-blue">Sector</label> 
@@ -34,7 +34,7 @@
                     
                     
                      <label class="w3-label w3-text-blue">Location</label> 
-                       <input type="text" class="w3-input w3-border"  th:field="*{location}" placeholder="e.g Kampala"  id="location>
+                       <input type="text" class="w3-input w3-border"  th:field="*{location}" placeholder="e.g Kampala"  id="location">
                      
                      <label class="w3-label w3-text-blue">Trainer</label>   
              <input type="text" class="w3-input w3-border"  th:field="*{trainer}" placeholder="e.g Mr .."  id="trainer">
@@ -56,6 +56,6 @@
  
                   </div> 
   
-      <th:block th:include="/fragments/footer"></th:block>  
+      <th:block th:include="/fragment/footer"></th:block>  
  </body>
 </html>

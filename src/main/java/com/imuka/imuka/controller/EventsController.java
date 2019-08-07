@@ -26,7 +26,7 @@ public class EventsController extends BaseController<Events>{
 	private static final Logger log = LogManager.getLogger("com.imuka.farm.controller.EventsController");
 
 	
-	//install servicse
+	//install service
 			@Autowired(required = true)
 			@Qualifier(value = "eventsServiceImpl")
 			private ImukaService<Events> evt;

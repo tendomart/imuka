@@ -21,14 +21,14 @@ import javax.persistence.Table;
 	}
 
 	public AnonynmousGuest(Long id, String district, String gender, String job, String interest,
-			String monthly_income) {
+			String country) {
 		super();
 		this.id = id;
 		this.district = district;
 		this.gender = gender;
 		this.job = job;
 		this.interest = interest;
-		this.monthly_income = monthly_income;
+		this.country = country;
 	}
 
 	/**
@@ -53,8 +53,8 @@ import javax.persistence.Table;
 	@Column(name = "interest", nullable = false)
 	private String interest;
 	
-	@Column(name = "monthly_income", nullable = false)
-	private String monthly_income;
+	@Column(name = "country", nullable = false)
+	private String country;
 
 	public Long getId() {
 		return id;
@@ -96,17 +96,19 @@ import javax.persistence.Table;
 		this.interest = interest;
 	}
 
-	public String getMonthly_income() {
-		return monthly_income;
+	public String getCountry() {
+		return country;
 	}
 
-	public void setMonthly_income(String monthly_income) {
-		this.monthly_income = monthly_income;
+	public void setCountry(String country) {
+		this.country = country;
 	}
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+
+	
 	
 //	@Override
 //	public Date getCreatedAt() {
