@@ -10,9 +10,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 @Entity
 @Table(name = "workshops")
-public class Workshops extends AuditModel implements Serializable{
+public class Workshops  implements Serializable{
+	//public class Workshops extends AuditModel implements Serializable{
 
 	public Workshops() {
 		super();
@@ -53,9 +56,11 @@ public class Workshops extends AuditModel implements Serializable{
 	@Column(name = "fee")
 	private String fee;
 	
+	@DateTimeFormat(pattern = "MM/dd/yyyy")
 	@Column(name = "start_date")
 	private Date start_date;
 	
+	@DateTimeFormat(pattern = "MM/dd/yyyy")
 	@Column(name = "end_date")
 	private Date end_date;
 

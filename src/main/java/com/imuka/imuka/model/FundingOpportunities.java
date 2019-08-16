@@ -11,7 +11,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "funding_opportunities")
-public class FundingOpportunities extends AuditModel implements Serializable{
+public class FundingOpportunities  implements Serializable{
+	//public class FundingOpportunities extends AuditModel implements Serializable{
 
 	public FundingOpportunities(Long id, String location, String funder, String organisation) {
 		super();

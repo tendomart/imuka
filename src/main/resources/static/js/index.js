@@ -1,4 +1,11 @@
- let showBox = ()=>{
+
+const Swal = require('sweetalert2')
+
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+
+import 'sweetalert2/src/sweetalert2.scss'
+
+let showBox = ()=>{
 	    const x = document.getElementById('popup_container');
 	    x.style.display="block";
 	}
@@ -31,40 +38,12 @@ function validate(){
 }
 
 
-//$("#anonymous_user").submit(function(event){
-//	event.preventDefault(); //prevent default action 
-//	var post_url = $(this).attr("action"); //get form action url
-//	var form_data = $(this).serialize(); //Encode form elements for submission
-//	
-//	$.post( post_url, form_data, function( response ) {
-//	  $("#server-results").html( response );
-//	});
-//});
-
-
-//$(function () {
-//    $('#submitButton').click(function (e) {
-// 
-//        //Prevent default submission of form
-//        e.preventDefault();
-// 
-//        //Remove previous errors
-//        $('input').next('span').remove();
-// 
-//        $.post({
-//            url: '/imuka/guest',
-//            data: $('#anonymous_user').serialize(),
-//            success: function (res) {
-//                if (res.validated) {
-//                    //take your successful action here; you may want to redirect to another page
-//                    alert("Registration Successful");
-//                } else {
-//                    $.each(res.errorMessages, function (key, value) {
-//                        $('input[name=' + key + ']').after('<span class="error">' + value + '</span>');
-//                    });
-//                }
-//            }
-//        })
-//    });
-// 
-//});
+function success(){
+	Swal.fire({
+		position: 'center',
+		type: 'success',
+		title: 'Your work has been saved',
+		showConfirmButton: false,
+		timer: 2000
+		})
+}

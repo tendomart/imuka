@@ -43,34 +43,37 @@ public class EventsController extends BaseController<Events>{
 			@PostMapping(value = "/")
 			public ModelAndView addItem(@Valid Events ev, BindingResult result, ModelAndView md, RedirectAttributes red) {
 				if (result.hasErrors()) {
+					md.addObject("result",result);
 					md.setViewName("403");
 		            return md;
 		        }
 		        evt.addItem(ev);
 		        md.addObject("events",new Events());
+		        md.setViewName("Events");
 		        red.addFlashAttribute("message", "Success");
 		        red.addFlashAttribute("alertClass", "alert-success");
 		        return md;
 				}
+			@GetMapping("/{id}")
 			@Override
 				public ModelAndView updateItem(HttpServletRequest request) {
 					// TODO Auto-generated method stub
 					return super.updateItem(request);
 				}
 			//Get Client By ID
-			@GetMapping("/{id}")
-			@Override
-				public ModelAndView getItemById(long id, ModelAndView md) {
-		          Optional<Events> byId = evt.getItemById(id);
-				
-				if (byId == null) {
-					log.info("Sorry Requested Id is not available");
-					return null;
-				}
-				md.addObject("result", byId);
-				md.setViewName("Events");
-				return md;
-				}
+//			@GetMapping("/{id}")
+//			@Override
+//				public ModelAndView getItemById(long id, ModelAndView md) {
+//		          Optional<Events> byId = evt.getItemById(id);
+//				
+//				if (byId == null) {
+//					log.info("Sorry Requested Id is not available");
+//					return null;
+//				}
+//				md.addObject("result", byId);
+//				md.setViewName("Events");
+//				return md;
+//				}
 			
 			@DeleteMapping(value = "/{id}")
 			@Override

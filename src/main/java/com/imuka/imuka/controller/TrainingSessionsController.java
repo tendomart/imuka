@@ -47,6 +47,7 @@ public class TrainingSessionsController extends BaseController<TrainingSessionsC
         }
         tss.addItem(ts);
         md.addObject("training",new TrainingSessions());
+        md.setViewName("TrainingSessions");
         red.addFlashAttribute("message", "Success");
         red.addFlashAttribute("alertClass", "alert-success");
         return md;

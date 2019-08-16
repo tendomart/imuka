@@ -47,6 +47,7 @@ public class VisitOpportunitiesController extends BaseController<VisitOpportunit
 	        }
 	        vos.addItem(vs);
 	        md.addObject("visit",new VisitOpportunities());
+	        md.setViewName("VisitOpportunities");
 	        red.addFlashAttribute("message", "Success");
 	        red.addFlashAttribute("alertClass", "alert-success");
 	        return md;

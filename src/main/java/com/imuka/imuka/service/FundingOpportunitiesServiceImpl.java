@@ -4,9 +4,12 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import com.imuka.imuka.dao.FundingOpportunitiesDaoImpl;
+import com.imuka.imuka.model.Events;
 import com.imuka.imuka.model.FundingOpportunities;
 /**
  * 
@@ -50,5 +53,12 @@ public class FundingOpportunitiesServiceImpl implements ImukaService<FundingOppo
 		// TODO Auto-generated method stub
 		return false;
 	}
+
+	@SuppressWarnings("deprecation")
+	@Override
+	public Page<FundingOpportunities> findPaginated(int page, int size) {
+		return fn.findAll(new PageRequest(page, size));
+	}
+	
 	
 }

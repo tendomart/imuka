@@ -49,6 +49,7 @@ public class FundingOpportunitiesController extends BaseController<FundingOpport
         }
         fnd.addItem(fn);
         md.addObject("funds",new FundingOpportunities());
+        md.setViewName("FundingOpportunities");
         red.addFlashAttribute("message", "Success");
         red.addFlashAttribute("alertClass", "alert-success");
         return md;

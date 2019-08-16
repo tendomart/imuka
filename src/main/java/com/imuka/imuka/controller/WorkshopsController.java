@@ -46,7 +46,8 @@ public class WorkshopsController extends BaseController<Workshops>{
             return md;
         }
         wk.addItem(w);
-        md.addObject("events",new Workshops());
+        md.addObject("workshop",new Workshops());
+        md.setViewName("Workshops");
         red.addFlashAttribute("message", "Success");
         red.addFlashAttribute("alertClass", "alert-success");
         return md;

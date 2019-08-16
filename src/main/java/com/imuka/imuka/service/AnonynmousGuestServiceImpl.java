@@ -4,6 +4,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -51,6 +52,12 @@ public AnonynmousGuestDaoImpl gs;
 	public boolean exists(Long primaryKey) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	@Override
+	public Page<AnonynmousGuest> findPaginated(int page, int size) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 

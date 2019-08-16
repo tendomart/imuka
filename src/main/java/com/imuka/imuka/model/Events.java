@@ -13,10 +13,11 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "events")
 
-public class Events extends AuditModel implements Serializable{
+public class Events  implements Serializable{
+//	public class Events extends AuditModel implements Serializable{
 
 	public Events(Long id, String event_name, String location, String topic, String facilitator, String fee,
-			Date start_date) {
+			String start_date) {
 		super();
 		this.id = id;
 		this.event_name = event_name;
@@ -61,7 +62,7 @@ public class Events extends AuditModel implements Serializable{
 
 	
 	@Column(name = "start_date")
-	private Date start_date;
+	private String start_date;
 
 
 	public Long getId() {
@@ -74,13 +75,13 @@ public class Events extends AuditModel implements Serializable{
 	}
 
 
-	public String getDistrict() {
+	public String getEvent_name() {
 		return event_name;
 	}
 
 
-	public void setDistrict(String district) {
-		this.event_name = district;
+	public void setEvent_name(String event_name) {
+		this.event_name = event_name;
 	}
 
 
@@ -124,18 +125,20 @@ public class Events extends AuditModel implements Serializable{
 	}
 
 
-	public Date getStart_date() {
+	public String getStart_date() {
 		return start_date;
 	}
 
 
 	public void setStart_date(Date start_date) {
-		this.start_date = start_date;
+		this.start_date = start_date.toString();
 	}
 
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	
+
+
+		
 }

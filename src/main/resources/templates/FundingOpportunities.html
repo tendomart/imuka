@@ -26,6 +26,7 @@
             <div  class="w3-container w3-padding-64 w3-card-4" >
               <header class="w3-container w3-black  w3-opacity">
   <h3>Please Register Funding Opportunities Here</h3>
+  <a class="w3-green " th:href="@{/funds/fnds}">See List</a>
 </header>
                 <!-- <h2 class="w3-text-blue"> Please Log In</h2>
                  -->
@@ -39,11 +40,9 @@
                        <input type="text" class="w3-input w3-border"  th:field="*{location}" placeholder="e.g Kampala"  id="location">
                      
                      <label class="w3-label w3-text-blue">Organisation</label>   
-             <input type="text" class="w3-input w3-border"  th:field="*{organisation}" placeholder="e.g Mr .."  id="organisation">
+             <input type="text" class="w3-input w3-border"  th:field="*{organisation}" placeholder="e.g UN"  id="organisation">
          
-                        <label class="w3-label w3-text-blue">Location</label> 
-                         <input type="text" class="w3-input w3-border"  th:field="*{location}" placeholder="e.g Masaka"  id="location"  >
-         
+                      
                   <p>          
                   <input type="submit"  class="w3-btn w3-ripple w3-green" value="Save Opportunity " onclick=""> 
                       </p> 

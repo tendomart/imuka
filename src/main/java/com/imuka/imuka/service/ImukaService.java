@@ -2,6 +2,8 @@ package com.imuka.imuka.service;
 
 import java.util.Optional;
 
+import org.springframework.data.domain.Page;
+
 public interface ImukaService<Entity> {
 
 	Iterable<Entity> getAllItems();
@@ -16,4 +18,6 @@ public interface ImukaService<Entity> {
 	
 	 void removeAllItems();
 	 boolean exists(Long primaryKey);  
+	 
+	 public Page<Entity> findPaginated(int page, int size);
 }

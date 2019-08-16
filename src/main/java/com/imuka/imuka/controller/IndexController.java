@@ -6,7 +6,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.imuka.imuka.model.AnonynmousGuest;
 @Controller
-//@RequestMapping("/")
 public class IndexController {
 	//get form
 			@GetMapping(value = "/")
