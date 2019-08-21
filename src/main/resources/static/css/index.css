@@ -17,6 +17,8 @@ html,body{
     background: rgb(0, 0, 73);
     text-align: center;
     padding: 0.020px;
+    width: 100%;
+    top: 0px;
     
 }
 .navigation li{
@@ -68,12 +70,14 @@ html,body{
     padding: 10px;
     font-size: 25px;
     font-weight: 700;
+    text-transform: capitalize;
 }
 .category_container{
     display: -webkit-box;
     -webkit-box-orient: horizontal;
     -webkit-box-pack: center;
     height: 37%;
+    text-transform: capitalize;
     
 }
 .category_tile{
@@ -91,6 +95,9 @@ html,body{
     display: block;
     text-decoration: none;
     color:black;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 .category_tile svg{
     width: 100px;
@@ -112,44 +119,99 @@ html,body{
     margin: 10px;
     font-size: 18px;
     border-radius: 5px;
+    text-transform: capitalize;
 }
-.deals_heading table{
-    
-}
+
 .deals_container{
     display: -webkit-box;
     -webkit-box-orient: horizontal;
-    
+    -webkit-box-pack: center;
     margin: 10px;
 }
 .colm1{
-    width: 50%;
-    text-align: center;
-   background: orangered;
-    color: white;
-    height: 200px;
+    width: 22%;
+   background:rgb(247, 245, 245);
+    height: 350px;
    border-radius: 10px;
    margin: 10px;
-}
-.colm1 p{
-    font-size: 30px;
+  text-align: center;
   
 }
+.colm1 p{
+    font-size: 18px;
+  
+}
+.colm2 p{
+    font-size: 18px;
+}
+
 .colm2{
-    width: 45%;
-    
-    background: orangered;
-    color: white;
+    width: 22%;
+    text-align: center;
+    background:rgb(247, 245, 245);
     border-radius: 10px;
     margin: 10px;
-    padding: 10px;
+   
 }
-.btn-link{
+.image_container{
+    width: 100%;
+    height: 80px;
+    background: -webkit-linear-gradient(left,darkblue,#0066FF);
+    
+}
+/* .card_footer{
+
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    bottom: 0;
+    position: relative;
+    background: -webkit-linear-gradient(left,darkblue,#0066FF);
+    
+} */
+.event_name{
+    word-wrap: break-word;
+}
+.logo_container img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin-top: -40px;
+    margin-left: 20px;
+    object-fit: cover;
+    object-position: right;
+    border: 2px solid white;
+}
+.button{
     text-decoration: none;
-    background: rgb(0, 0, 73);
-    padding: 10px 20px;
-    border-radius: 20px;
+    background: transparent;
+    padding: 5px 30px;
+    margin-top: 20px;
+    color:rgb(0, 0, 73);
+   
+    border: 2px solid rgb(0, 0, 73);
+}
+.medium{
+    text-decoration: none;
+    background: transparent;
+    padding: 5px 30px;
+    color:orangered;
+    border: 2px solid orangered;
+    
+}
+.medium:hover{
+    background:orangered;
     color: white;
+}
+.button:hover{
+background: rgb(0, 0, 73);
+color: white;
+border: 0px;
+transition: all 2s;
+}
+.company_name a{
+    font-weight: 700;
+    font-size: 20px;
 }
 .more_container{
     padding: 10px;
@@ -168,12 +230,14 @@ a{
     margin: 10px;
     font-size: 18px;
     border-radius: 5px;
+    text-transform: capitalize;
 }
 .fund_opportunity_conatiner{
     display: -webkit-box;
     -webkit-box-orient:horizontal;
     -webkit-box-pack: center;
-    color: white;
+ 
+    
 }
 .header{
     background: rgb(5, 5, 70);
@@ -183,46 +247,82 @@ a{
     font-size: 18px;
     border-radius: 5px;
     padding: 10px;
+    
   
 }
 .colm_rw{
     display: -webkit-box;
     -webkit-box-orient:horizontal;
     -webkit-box-pack: center;
+    
 }
 .tile{
-    width: 200px;
-    height: 200px;
-    background: rgb(5, 5, 70);
+    width: 250px;
+    height: 400px;
+    background: whitesmoke;
     text-align: center;
     margin: 10px;
 }
 .tile1{
-    width: 200px;
-    height: 200px;
-    background: rgb(5, 5, 70);
+    width: 250px;
+    height: 400px;
+    background:whitesmoke;
     text-align: center;
     margin: 10px;
+    font-size: 15px;
+    word-wrap: break-word;
    
 }
+.tile1 svg{
+    width: 40px;
+    height: 40px;
+    fill:orangered;
+}
+.tile1 ul{
+    margin-right: 40px;
+  
+}
+.tile1 li{
+    margin: 9px;
+   
+}
+#Ebene{
+    width: 40px;
+    height: 40px;
+    fill:orangered;
+}
+.tile1 header{
+    background: -webkit-linear-gradient(left,orangered,brown);
+    height: 50px;
+}
 .tile2{
-    width: 200px;
-    height: 200px;
-    background: rgb(5, 5, 70);
+    width: 300px;
+    height: fit-content;
+    background: whitesmoke;
     text-align: center;
     margin: 10px;
 }
+.tile2 header{
+    background: -webkit-linear-gradient(left,orangered,brown);
+    height: 50px;
+}
+.tile3 header{
+    background: -webkit-linear-gradient(left,orangered,brown);
+    height: 50px;
+}
+.tile4 header{
+    background: -webkit-linear-gradient(left,orangered,brown);
+    height: 50px;
+}
 .tile3{
-    width: 200px;
-    height: 200px;
-    background: rgb(5, 5, 70);
+    width: 300px;
+    height: fit-content;
+   background: whitesmoke;
     text-align: center;
     margin: 10px;
 }
 .tile4{
-    width: 200px;
-    height: 200px;
-    background: rgb(5, 5, 70);
+    background: whitesmoke;
     text-align: center;
     margin: 10px;
 }
@@ -261,11 +361,13 @@ li{
     width: 100%;
     position: fixed;
     display: none;
+    z-index: 1;
+    overflow: hidden;
 }
 .content_container{
     width: 400px;
     height: 500px;
-    background-image: url(img/vc1.jpg);
+    background-image: url(/img/vc1.jpg);
     background-size: cover;
     margin-left:280px;
     text-align: center;
@@ -282,6 +384,8 @@ li{
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     padding: 5px;
+    margin: unset;
+    position: unset;
 }
 .form_container header{
     color: white;
@@ -338,4 +442,99 @@ option{
     background:blue;
     border: 0px;
     font-size: 15px;
+}
+.pic_container img{
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    border: 2px solid white;
+    margin-top: -20px;
+}
+.pic_container{
+    text-align: center;
+}
+.events_header{
+    background:orangered;
+}
+.company_name{
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+}
+#Events{
+    background: limegreen;
+}
+.workshops header{
+background: -webkit-linear-gradient(left,green,lime);
+height: 40px;
+}
+.workshops img{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: right top;
+    margin-top: -20px;
+}
+.workshops ul{
+    margin-right: 30px;
+}
+.workshops svg{
+    fill: lime;
+    width: 40px;
+    height: 40px;
+}
+.date{
+    font-size: 20px;
+    font-weight: 700;
+    color: lime;
+}
+#visits{
+    background: -webkit-linear-gradient(right,darkblue,teal);
+
+}
+.card header{
+background: -webkit-linear-gradient(right,darkblue,teal);
+ padding:10px;
+ height: 30px;
+}
+.event_name{
+    font-size: 25px;
+    font-weight: 500;
+    padding: 20px;
+}
+.card svg{
+fill: darkblue;
+width: 40px;
+height: 40px;
+}
+.svg_container{
+padding: 20px;
+}
+#trainings{
+    background: -webkit-linear-gradient(right,rgb(0, 132, 255),darkblue);
+
+}
+.t header{
+    background: -webkit-linear-gradient(right,rgb(0, 132, 255),darkblue);
+    padding:10px;
+    height: 30px;
+}
+.t svg{
+    fill: #0066FF;
+    width: 40px;
+    height: 40px;
+}
+#funding_opportunities{
+    background: rgb(48, 8, 48);
+}
+.funding_h header{
+    background: rgb(48, 8, 48);
+    padding:10px;
+    height: 30px;
+}
+.funding_h svg{
+    fill: rgb(48, 8, 48);
+    width: 40px;
+    height: 40px;
 }
