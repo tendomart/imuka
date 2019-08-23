@@ -1,2 +1,2 @@
 # imuka
-Connects Enterprenuers to Farmers
+Connecting Enterprenuers to Investors.
