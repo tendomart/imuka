@@ -31,6 +31,7 @@ public class EventsController extends BaseController<Events>{
 			@Qualifier(value = "eventsServiceImpl")
 			private ImukaService<Events> evt;
 			
+			
 			//get form
 			@GetMapping(value = "/")
 			@Override
@@ -54,6 +55,8 @@ public class EventsController extends BaseController<Events>{
 					md.setViewName("403");
 		            return md;
 		        }
+				//
+				//super.parseDate()
 		        evt.addItem(ev);
 		        md.addObject("events",new Events());
 		        md.setViewName("Events");

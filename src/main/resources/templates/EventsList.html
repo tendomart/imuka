@@ -30,6 +30,8 @@
   <th>Fee</th>
   <th>Location</th>
   <th>Topic</th>
+  <th>Contact</th>
+  <th>Banner</th>
   <th>Start Date</th>
    <th>Edit</th>
   <th>Delete</th>
@@ -43,6 +45,8 @@
                     <td th:text="${evt.fee}"></td>
                      <td th:text="${evt.location}"></td>
                       <td th:text="${evt.topic}"></td>
+                      <td th:text="${evt.contact}"></td>
+                        <td th:text="${evt.image}"></td>
                       <td th:text="${evt.start_date}"></td>
                     <td><a class="w3-button w3-green" th:href="@{/events/{id}(id=${evt.id})}">Edit</a></td>
                     <td><a class="w3-button w3-red" th:href="@{/events/{id}(id=${evt.id})}">Delete</a></td>
@@ -55,7 +59,7 @@
 </div>
 
 
- <th:block th:include="/fragment/footer"></th:block>
+ <th:block th:include="/fragment/_footer"></th:block>
 
 
 </body>

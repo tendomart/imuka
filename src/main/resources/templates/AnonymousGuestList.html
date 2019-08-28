@@ -14,7 +14,7 @@
 </head>
 <body>
 
-                        <th:block th:include="/fragments/header"></th:block>
+                        <th:block th:include="/fragment/header"></th:block>
 
                         
 
@@ -30,7 +30,6 @@
   <th>Gender</th>
   <th>Interest</th>
   <th>Job / Career</th>
-  <th>Monthly Income</th>
    <th>Edit</th>
   <th>Delete</th>
 </tr>
@@ -43,7 +42,6 @@
                     <td th:text="${anon.gender}"></td>
                      <td th:text="${anon.interest}"></td>
                       <td th:text="${anon.job}"></td>
-                      <td th:text="${anon.monthly_income}"></td>
                     <td><a th:href="@{/anonynm/{id}(id=${anon.id})}">Edit</a></td>
                     <td><a th:href="@{/anonynm/{id}(id=${anon.id})}">Delete</a></td>
                 </tr>
@@ -55,7 +53,7 @@
 </div>
 
 
-
+ <th:block th:include="/fragment/_footer"></th:block>
 
 </body>
 </html>

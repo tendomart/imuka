@@ -3,7 +3,7 @@ package com.imuka.imuka.service;
 import java.util.Optional;
 
 import org.springframework.data.domain.Page;
-
+import org.springframework.data.domain.Pageable;
 public interface ImukaService<Entity> {
 
 	Iterable<Entity> getAllItems();
@@ -20,4 +20,5 @@ public interface ImukaService<Entity> {
 	 boolean exists(Long primaryKey);  
 	 
 	 public Page<Entity> findPaginated(int page, int size);
+	 Page<Entity> findAllProductsPageable(Pageable pageable);
 }

@@ -11,24 +11,28 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 @Entity
 @Table(name = "visit_opportunities")
-public class VisitOpportunities implements Serializable{
-//	public class VisitOpportunities extends AuditModel implements Serializable{
-
-	public VisitOpportunities(Long id, String location, String agent, String fee, String start_date, String end_date) {
+public class VisitOpportunities  implements Serializable{
+public VisitOpportunities(Long id, String location, String agent, String fee, String contact, String start_date,
+			String end_date) {
 		super();
 		this.id = id;
 		this.location = location;
 		this.agent = agent;
 		this.fee = fee;
+		this.contact = contact;
 		this.start_date = start_date;
 		this.end_date = end_date;
 	}
 
-	public VisitOpportunities() {
+public VisitOpportunities() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
+
+//	public class VisitOpportunities extends AuditModel implements Serializable{
+
+	
 	/**
 	 * 
 	 */
@@ -48,6 +52,11 @@ public class VisitOpportunities implements Serializable{
 	
 	@Column(name = "fee")
 	private String fee;
+	
+
+	@Column(name = "contact")
+	public String contact;
+	
 	
 	@Column(name = "start_date")
 	private String start_date;
@@ -105,6 +114,22 @@ public class VisitOpportunities implements Serializable{
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+
+	public void setStart_date(String start_date) {
+		this.start_date = start_date;
+	}
+
+	public void setEnd_date(String end_date) {
+		this.end_date = end_date;
+	}
+
+	public String getContact() {
+		return contact;
+	}
+
+	public void setContact(String contact) {
+		this.contact = contact;
 	}
 
 }

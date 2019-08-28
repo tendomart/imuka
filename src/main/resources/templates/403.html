@@ -16,9 +16,12 @@
  <th:block th:include="/fragment/header"></th:block>
  
  
- 
- <div>Error</div>
-            <th:block th:include="/fragment/footer"></th:block>
+ <br>
+ <div ><h1 class="w3-red">ATTENTION ! Error You Cannot Perform the Action</h1></div>
+ <br>
+ <div ><h2 class="w3-red">See ERROR</h2></div>
+ <div th:text="${result}"></div>
+            <th:block th:include="/fragment/_footer"></th:block>
       
  </body>
 </html>

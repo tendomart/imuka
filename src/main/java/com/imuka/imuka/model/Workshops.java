@@ -14,31 +14,41 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(name = "workshops")
-public class Workshops  implements Serializable{
+public class Workshops   implements Serializable{
+	public Workshops(Long id, String location, String address, String trainer, String topic, String fee,
+			String contact,String start_date, String end_date) {
+		super();
+		this.id = id;
+		this.location = location;
+		this.address = address;
+		this.trainer = trainer;
+		this.topic = topic;
+		this.fee = fee;
+		this.contact = contact;
+		this.start_date = start_date;
+		this.end_date = end_date;
+	}
+
 	//public class Workshops extends AuditModel implements Serializable{
+
+	
 
 	public Workshops() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Workshops(Long id, String location, String facilitator, String topic, String fee, Date start_date,
-			Date end_date) {
-		super();
-		this.id = id;
-		this.location = location;
-		this.trainer = facilitator;
-		this.topic = topic;
-		this.fee = fee;
-		this.start_date = start_date;
-		this.end_date = end_date;
-	}
+
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -929252149761771211L;
 	
+	
+	
+	
+
 	@Id
 	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -46,6 +56,9 @@ public class Workshops  implements Serializable{
 	
 	@Column(name = "location")
 	public String location;
+	
+	@Column(name = "address")
+	public String address;
 	
 	@Column(name = "trainer")
 	public String trainer;
@@ -56,13 +69,22 @@ public class Workshops  implements Serializable{
 	@Column(name = "fee")
 	private String fee;
 	
-	@DateTimeFormat(pattern = "MM/dd/yyyy")
-	@Column(name = "start_date")
-	private Date start_date;
+	@Column(name = "contact")
+	private String contact;
 	
-	@DateTimeFormat(pattern = "MM/dd/yyyy")
+	//@DateTimeFormat(pattern = "MM/dd/yyyy")
+	//@Column(name = "start_date")
+	//private Date start_date;
+	
+	//@DateTimeFormat(pattern = "MM/dd/yyyy")
+	//@Column(name = "end_date")
+	//private Date end_date;
+
+	@Column(name = "start_date")
+	private String start_date;
+	
 	@Column(name = "end_date")
-	private Date end_date;
+	private String end_date;
 
 	public Long getId() {
 		return id;
@@ -104,24 +126,40 @@ public class Workshops  implements Serializable{
 		this.fee = fee;
 	}
 
-	public Date getStart_date() {
+	public String getStart_date() {
 		return start_date;
 	}
 
-	public void setStart_date(Date start_date) {
+	public void setStart_date(String start_date) {
 		this.start_date = start_date;
 	}
 
-	public Date getEnd_date() {
+	public String getEnd_date() {
 		return end_date;
 	}
 
-	public void setEnd_date(Date end_date) {
+	public void setEnd_date(String end_date) {
 		this.end_date = end_date;
 	}
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getContact() {
+		return contact;
+	}
+
+	public void setContact(String contact) {
+		this.contact = contact;
 	}
 
 	

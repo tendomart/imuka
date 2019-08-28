@@ -22,34 +22,37 @@
             <div  class="w3-container w3-padding-64 w3-card-4" >
               <header class="w3-container w3-black  w3-opacity">
   <h3>Workshops</h3>
-  <a class="w3-green" th:href="@{/workshop/wks}">See List</a>
+  <a class="w3-green w3-button " th:href="@{/workshop/wks}">See Workshop List</a>
 </header>
                 
                 <form action="#" th:action="@{/workshop/}" th:object="${workshop}" method="post">
                 
                         <h3 id="error"></h3>
                        <label class="w3-label w3-text-blue">Fee</label> 
-                       <input type="text" class="w3-input w3-border"  th:field="*{fee}"  id="fee" >
+                       <input type="text" class="w3-input w3-hover-border-teal"  th:field="*{fee}"  id="fee" >
                     
                     
                      <label class="w3-label w3-text-blue">Location</label> 
-                       <input type="text" class="w3-input w3-border"  th:field="*{location}" placeholder="e.g Gulu"  id="location">
+                       <input type="text" class="w3-input w3-hover-border-teal"  th:field="*{location}" placeholder="e.g Gulu"  id="location">
                      
                      <label class="w3-label w3-text-blue">Trainer</label>   
-             <input type="text" class="w3-input w3-border"  th:field="*{trainer}" placeholder="e.g Mr .."  id="trainer">
+             <input type="text" class="w3-input w3-hover-border-teal"  th:field="*{trainer}" placeholder="e.g Mr .."  id="trainer">
          
           <label class="w3-label w3-text-blue">Topic</label>   
-             <input type="text" class="w3-input w3-border"  th:field="*{topic}" placeholder="e.g Markets"  id="topic">
+             <input type="text" class="w3-input w3-hover-border-teal"  th:field="*{topic}" placeholder="e.g Markets"  id="topic">
          
-                        <label class="w3-label w3-text-blue">Location</label> 
-                         <input type="text" class="w3-input w3-border"  th:field="*{location}" placeholder="e.g Masaka"  id="organisation"  >
+                        <label class="w3-label w3-text-blue">Address</label> 
+                         <input type="text" class="w3-input w3-hover-border-teal"  th:field="*{address}" placeholder="e.g Masaka"  id="organisation"  >
+         
+          <label class="w3-label w3-text-blue">Contact</label> 
+                         <input type="tel" class="w3-input w3-hover-border-teal"  th:field="*{contact}" placeholder="e.g Masaka"  id="organisation"  >
          
          
                         <label class="w3-label w3-text-blue">Start Date</label> 
-                         <input type="date" class="w3-input w3-border"  th:field="*{start_date}"   id="start_date"  >
-         
+                        <input type="date" class="w3-input w3-hover-border-teal"  th:field="*{start_date}"   id="start_date"  >
+       
           <label class="w3-label w3-text-blue">End Date</label> 
-                         <input type="date" class="w3-input w3-border"  th:field="*{end_date}"   id="end_date"  >
+                           <input type="date" class="w3-input w3-hover-border-teal"  th:field="*{end_date}"   id="end_date"  >
          
                   <p>          
                   <input type="submit"  class="w3-btn w3-ripple w3-green" value="Save Session" onclick=""> 
@@ -58,6 +61,6 @@
  
                   </div> 
   
-      <th:block th:include="/fragment/footer"></th:block>  
+      <th:block th:include="/fragment/_footer"></th:block>  
  </body>
 </html>

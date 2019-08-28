@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.imuka.imuka.dao.EventsDaoImpl;
@@ -57,6 +58,12 @@ public class EventsServiceImpl implements ImukaService<Events> {
 	@Override
 	public Page<Events> findPaginated(int page, int size) {
 		return ev.findAll(new PageRequest(page, size));
+	}
+
+	@Override
+	public Page<Events> findAllProductsPageable(Pageable pageable) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	

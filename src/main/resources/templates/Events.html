@@ -26,7 +26,7 @@
             <div  class="w3-container w3-padding-64 w3-card-4" >
               <header class="w3-container w3-black  w3-opacity">
   <h3>Events Here</h3>
-  <a class="w3-green" th:href="@{/events/evts}">See List</a>
+  <a class="w3-green w3-btn" th:href="@{/events/evts}">See Events List</a>
 </header>
                 <!-- <h2 class="w3-text-blue"> Please Log In</h2>
                  -->
@@ -35,21 +35,28 @@
                 
                         <h3 id="error"></h3>
                        <label class="w3-label w3-text-blue">Event Name</label> 
-                       <input type="text" class="w3-input w3-border"  th:field="*{event_name}" placeholder="e.g Farming Seminar" id="name" > 
+                       <input type="text" class="w3-input w3-hover-border-teal"  th:field="*{event_name}" placeholder="e.g Farming Seminar" id="name" > 
                      <label class="w3-label w3-text-blue">Facilitator</label> 
-                       <input type="text" class="w3-input w3-border"  th:field="*{facilitator}" placeholder="e.g Mr John Kabuye"  id="std_id"  >
+                       <input type="text" class="w3-input  w3-hover-border-teal"  th:field="*{facilitator}" placeholder="e.g Mr John Kabuye"  id="std_id"  >
                      <label class="w3-label w3-text-blue">Fee</label>   
-             <input type="number" class="w3-input w3-border"  th:field="*{fee}" placeholder="e.g 150000"  id="std_id"  >
+             <input type="number" class="w3-input  w3-hover-border-teal"  th:field="*{fee}" placeholder="e.g 150000"  id="std_id"  >
+         
+         <label class="w3-label w3-text-blue">Contact</label>   
+             <input type="number" class="w3-input  w3-hover-border-teal"  th:field="*{contact}" placeholder="e.g  0752-678-900"  id="std_id"  >
          
                         <label class="w3-label w3-text-blue">Location</label> 
-                         <input type="text" class="w3-input w3-border"  th:field="*{location}" placeholder="e.g Masaka"  id="std_id"  >
+                         <input type="text" class="w3-input w3-hover-border-teal"  th:field="*{location}" placeholder="e.g Masaka"  id="std_id"  >
          
                                 <label class="w3-label w3-text-blue">Start Date</label>
-                          <input type="Date" class="w3-input  w3-border" th:field="*{start_date}" placeholder="e.g 12/June/2019" id="contact"/>
+                         <!--  --> <input type="date" class="w3-input  w3-hover-border-teal" th:field="*{start_date}" placeholder="e.g 12/June/2019" id="contact"/>
                           
               <label class="w3-label w3-text-blue">Topic</label> 
-                         <input type="text" class="w3-input w3-border"  th:field="*{topic}" placeholder="e.g Business"  id="std_id"  >
+                         <input type="text" class="w3-input w3-hover-border-teal"  th:field="*{topic}" placeholder="e.g Business"  id="std_id"  >
                       
+                      <label class="w3-label w3-text-blue">Upload Banner</label> 
+                         <input type="file" class="w3-input w3-hover-border-teal"  th:field="*{image}" placeholder="e.g Business"  id="std_id"  >
+                      
+               
                    <p> 
                                
                         <input type="submit"  class="w3-btn w3-ripple w3-green" id="submit_event" value="Save Events  Data" onclick="success()"> 
@@ -59,7 +66,7 @@
                   </div>
              
   
-      <th:block th:include="/fragment/footer"></th:block>
+      <th:block th:include="/fragment/_footer"></th:block>
       
  </body>
 </html>

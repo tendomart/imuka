@@ -8,16 +8,19 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(name = "events")
 
-public class Events  implements Serializable{
-//	public class Events extends AuditModel implements Serializable{
-
-	public Events(Long id, String event_name, String location, String topic, String facilitator, String fee,
-			String start_date) {
+public class Events implements Serializable{
+public Events(Long id, String event_name, String location, String topic, String facilitator, String fee,
+			byte[] image, String start_date, String contact) {
 		super();
 		this.id = id;
 		this.event_name = event_name;
@@ -25,14 +28,27 @@ public class Events  implements Serializable{
 		this.topic = topic;
 		this.facilitator = facilitator;
 		this.fee = fee;
+		this.image = image;
 		this.start_date = start_date;
+		this.contact = contact;
 	}
 
 
-	public Events() {
+public Events() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
+
+
+
+
+//	public class Events extends AuditModel implements Serializable{
+
+	
+
+
+	
 
 
 	/**
@@ -59,10 +75,21 @@ public class Events  implements Serializable{
 	
 	@Column(name = "fee")
 	private String fee;
+	
+	@Lob
+	@Column(name = "Image", length = Integer.MAX_VALUE, nullable = true)
+	private byte[] image;
 
+	//@DateTimeFormat(pattern = "MM-dd-yyyy")
+	//@Column(name = "start_date")
+	//@Temporal(TemporalType.TIMESTAMP)
+	//private Date start_date;
 	
 	@Column(name = "start_date")
 	private String start_date;
+
+	@Column(name = "contact")
+	private String contact;
 
 
 	public Long getId() {
@@ -130,13 +157,34 @@ public class Events  implements Serializable{
 	}
 
 
-	public void setStart_date(Date start_date) {
-		this.start_date = start_date.toString();
+	
+	public void setStart_date(String start_date) {
+		this.start_date = start_date;
 	}
 
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+
+
+	public byte[] getImage() {
+		return image;
+	}
+
+
+	public void setImage(byte[] image) {
+		this.image = image;
+	}
+
+
+	public String getContact() {
+		return contact;
+	}
+
+
+	public void setContact(String contact) {
+		this.contact = contact;
 	}
 
 

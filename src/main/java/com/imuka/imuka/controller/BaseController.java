@@ -1,8 +1,15 @@
 package com.imuka.imuka.controller;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -12,6 +19,23 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 public abstract class BaseController<Item>{
 	public BaseController() {}
 
+	@InitBinder
+	public void initBinder(WebDataBinder webDataBinder) {
+	 SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy");
+	 dateFormat.setLenient(false);
+	 webDataBinder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, true));
+	 }
+	
+	
+	public Date parseDate(String dateStr) throws ParseException {
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy");
+		Date date = dateFormat.parse(dateStr);
+		return date;
+	}
+	//@InitBinder
+   // public void initBinder (WebDataBinder binder) {
+      //  binder.registerCustomEditor(Date.class, new CustomDateEditor(new SimpleDateFormat("yyyy/MM/dd"), true));
+   // }
 	public ModelAndView getForm(ModelAndView md) {
 		return md;
 		}

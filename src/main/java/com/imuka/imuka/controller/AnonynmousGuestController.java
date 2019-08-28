@@ -35,7 +35,7 @@ public class AnonynmousGuestController extends BaseController<AnonynmousGuest>{
 		@Override
 			public ModelAndView getForm(ModelAndView md) {
 			 md.addObject("anonynmousGuest",new AnonynmousGuest());
-			md.setViewName("index");
+			md.setViewName("Home");
 			return md;
 			}
 		@Override
@@ -47,12 +47,11 @@ public class AnonynmousGuestController extends BaseController<AnonynmousGuest>{
 				md.setViewName("403");
 	            return md;
 	        }
-			red.addFlashAttribute("message", "Success");
-	        red.addFlashAttribute("alertClass", "alert-success");
 	        anon.addItem(an);
 	        md.addObject("anonynmousGuest",new AnonynmousGuest());
-	        md.setViewName("index");
-	        
+	        md.setViewName("Home");
+		    red.addFlashAttribute("message", "Success");
+	        red.addFlashAttribute("alertClass", "alert-success");
 	        return md;
 			}
 		@Override

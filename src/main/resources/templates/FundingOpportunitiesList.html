@@ -4,7 +4,7 @@
 <head >
 <meta>
 <!--Page Title-->
-<title>Events List</title>
+<title>Funding List</title>
 <!--Reference css styling-->
               <link type="text/css" th:href="@{/css/index.css}" rel="stylesheet"/>
 <link type="text/css" th:href="@{/css/login.css}" rel="stylesheet"/>
@@ -20,7 +20,7 @@
 
 <div class="w3-container w3-padding-64 w3-card-4">
 <header class="w3-container w3-black  w3-opacity">
-  <h3>Eunding Oppotunities List</h3>
+  <h3>Funding Oppotunities List</h3>
 </header>
 <table class="w3-table w3-striped w3-bordered ">
 <thead>
@@ -29,6 +29,7 @@
   <th>Funder</th>
   <th>Location</th>
   <th>Organization</th>
+  <th>Contact</th>
    <th>Edit</th>
   <th>Delete</th>
 </tr>
@@ -40,6 +41,7 @@
                     <td th:text="${fn.funder}"></td>
                      <td th:text="${fn.location}"></td>
                       <td th:text="${fn.organisation}"></td>
+                        <td th:text="${fn.contact}"></td>
                     <td><a class="w3-green w3-button"th:href="@{/funds/{id}(id=${fn.id})}">Edit</a></td>
                     <td><a class="w3-red w3-button" th:href="@{/funds/{id}(id=${fn.id})}">Delete</a></td>
                 </tr>
@@ -51,7 +53,7 @@
 </div>
 
 
- <th:block th:include="/fragment/footer"></th:block>
+ <th:block th:include="/fragment/_footer"></th:block>
 
 
 </body>

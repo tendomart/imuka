@@ -1,7 +1,6 @@
 package com.imuka.imuka.model;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -10,18 +9,24 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import org.springframework.format.annotation.DateTimeFormat;
 @Entity
 @Table(name = "training_sessions")
-public class TrainingSessions  implements Serializable{
+public class TrainingSessions implements Serializable{
 	
 
-	public TrainingSessions(Long id, String location, String trainer, String sector, String fee,
-			LocalDateTime start_date, LocalDateTime end_date) {
+
+
+	public TrainingSessions() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public TrainingSessions(String phone, String email, Long id, String location, String address, String trainer,
+			String sector, String fee, String start_date, String end_date) {
 		super();
 		this.id = id;
 		this.location = location;
+		this.address = address;
 		this.trainer = trainer;
 		this.sector = sector;
 		this.fee = fee;
@@ -31,11 +36,7 @@ public class TrainingSessions  implements Serializable{
 
 	//public class TrainingSessions extends AuditModel implements Serializable{
 
-	public TrainingSessions() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
+	
 	
 
 	/**
@@ -51,6 +52,9 @@ public class TrainingSessions  implements Serializable{
 	@Column(name = "location")
 	public String location;
 	
+	@Column(name = "address")
+	public String address;
+	
 	@Column(name = "trainer")
 	public String trainer;
 	
@@ -60,13 +64,20 @@ public class TrainingSessions  implements Serializable{
 	@Column(name = "fee")
 	private String fee;
 	
+	//@Column(name = "start_date")
+	//@DateTimeFormat(pattern = "MM-dd-yyyy")
+   // private Date start_date;
+    
+	//@Column(name = "end_date")
+	//@DateFormat(pattern = "MM-dd-yyyy")
+   // private Date end_date;
+
+	
 	@Column(name = "start_date")
-    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
-    private LocalDateTime start_date;
+    private String start_date;
     
 	@Column(name = "end_date")
-    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
-    private LocalDateTime end_date;
+	private String end_date;
 
 	public Long getId() {
 		return id;
@@ -108,25 +119,34 @@ public class TrainingSessions  implements Serializable{
 		this.fee = fee;
 	}
 
-	public LocalDateTime getStart_date() {
+	public String getStart_date() {
 		return start_date;
 	}
 
-	public void setStart_date(LocalDateTime start_date) {
+	public void setStart_date(String start_date) {
 		this.start_date = start_date;
 	}
 
-	public LocalDateTime getEnd_date() {
+	public String getEnd_date() {
 		return end_date;
 	}
 
-	public void setEnd_date(LocalDateTime end_date) {
+	public void setEnd_date(String end_date) {
 		this.end_date = end_date;
 	}
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	
     
 	//@Column(name = "start_date")
 	//private String start_date;

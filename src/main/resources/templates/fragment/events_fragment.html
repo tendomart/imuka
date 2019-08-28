@@ -6,45 +6,36 @@
 
     <!-- Upcoming Events section -->
   <section class="fund_opportunity_conatiner">
-    <div class="tile1"  th:each="event : ${events}">
+   
+         <div class="tile1" th:each="event : ${events}">
         
-            <header>
-            
+            <header class="card_header">
+                 <a href="#" th:href="@{'/imuka/events/'+${event.id}}"><img src="img/evt2.jpg" alt="avat"></a>
+         
             </header>
-            <div class="pic_container">
-              <a href="#" th:href="@{'/imuka/events/'+${event.id}}"><img src="img/84.png" alt=""></a>
-            </div>
-            <div class="company_name" >
-                <p th:text="${event.event_name}">
-                    5th Leap Conference
-                </p>
-                
-            </div>
-            
-             
-            <div>
-                
-                        <ul>
-                            <!-- <li>
-                                <svg version="1.1" id="Ebene" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
-                                   <g>
-                                     <path d="M16,2C8.3,2,2,8.3,2,16s6.3,14,14,14s14-6.3,14-14S23.7,2,16,2z M16,28C9.4,28,4,22.6,4,16S9.4,4,16,4s12,5.4,12,12
-                                     S22.6,28,16,28z"/>
-                                         <path d="M9.5,9.5l3.9,9.1l9.1,3.9l-3.9-9.1L9.5,9.5z M14.9,17.1l-1.6-3.8l3.8,1.6l1.6,3.8L14.9,17.1z"/>
-                                         </g>
-                                    </svg>
-                            </li> -->
-                            <!-- <li>
-                                <a>plot 104 luthuli avenue</a>
-                            </li> -->
-                            <!-- <li>
-                                <p>
-                                    Financial management training
-                                </p>
-                            </li> -->
-                            <li>
-                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <div class="container">
+                <table>
+                    <tr>
+                        <td>
+                            <a class="company_name">Event Name</a>
+                        </td>
+                        <td>
+                            <p th:text="${event.event_name}">
+                                5th Leap Conference
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a class="company_name">Fee</a>
+                        </td>
+                        <td>
+                            <a class="price" th:text="${event.fee}">Ugx 20,000</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 <g>
 	<g>
@@ -63,55 +54,42 @@
 	</g>
 
 </svg>
-                            </li>
-                            <li>
-                                 <p th:text="${event.location}"> 
-                               September 2019
-                                </p>
-                            </li>
-                            <!-- <li>
-                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 29.731 29.731" style="enable-background:new 0 0 29.731 29.731;" xml:space="preserve">
-<g>
-	<path d="M23.895,29.731c-1.237,0-2.731-0.31-4.374-0.93c-3.602-1.358-7.521-4.042-11.035-7.556
-		c-3.515-3.515-6.199-7.435-7.558-11.037C-0.307,6.933-0.31,4.245,0.921,3.015c0.177-0.177,0.357-0.367,0.543-0.563
-		c1.123-1.181,2.392-2.51,4.074-2.45C6.697,0.05,7.82,0.77,8.97,2.201c3.398,4.226,1.866,5.732,0.093,7.478l-0.313,0.31
-		c-0.29,0.29-0.838,1.633,4.26,6.731c1.664,1.664,3.083,2.882,4.217,3.619c0.714,0.464,1.991,1.166,2.515,0.642l0.315-0.318
-		c1.744-1.769,3.25-3.296,7.473,0.099c1.431,1.15,2.15,2.272,2.198,3.433c0.069,1.681-1.27,2.953-2.452,4.075
-		c-0.195,0.186-0.385,0.366-0.562,0.542C26.103,29.424,25.126,29.731,23.895,29.731z M5.418,1C4.223,1,3.144,2.136,2.189,3.141
-		C1.997,3.343,1.811,3.539,1.628,3.722C0.711,4.638,0.804,7.045,1.864,9.856c1.31,3.472,3.913,7.266,7.33,10.683
-		c3.416,3.415,7.208,6.018,10.681,7.327c2.811,1.062,5.218,1.152,6.133,0.237c0.183-0.183,0.379-0.369,0.581-0.56
-		c1.027-0.976,2.192-2.082,2.141-3.309c-0.035-0.843-0.649-1.75-1.825-2.695c-3.519-2.83-4.503-1.831-6.135-0.176l-0.32,0.323
-		c-0.78,0.781-2.047,0.608-3.767-0.51c-1.193-0.776-2.667-2.038-4.379-3.751c-4.231-4.23-5.584-6.819-4.26-8.146l0.319-0.315
-		c1.659-1.632,2.66-2.617-0.171-6.138C7.245,1.651,6.339,1.037,5.496,1.001C5.47,1,5.444,1,5.418,1z"/>
-</g>
+                        </td>
+                        <td>
+                            <p th:text="${event.start_date}">
+                                September 2019
+                                 </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a>Call</a>
+                        </td>
+                        <td>
+                            <a th:text="${event.contact}">+256707557835553</a>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <a>Location</a>
+                        </td>
+                        <td>
+                            <a th:text="${event.location}">Kampala</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <footer>
+              <!--    <a href="" class="medium">Apply</a> -->
 
-</svg>
-
-                            </li>
-                            <li>
-                                <a>
-                                    +256733558575363
-                                </a>
-
-                            </li> -->
-                            <li>
-                                <a href="" class="medium">Apply</a>
-                            </li>
-                        </ul>
-                           
-
-                       
-                        
-                   
-                    
-                     
-                            
+            </footer>                         
 
             </div>
          
-        </div>
         </section>
         
         </div>
-     
+      
+      
+      

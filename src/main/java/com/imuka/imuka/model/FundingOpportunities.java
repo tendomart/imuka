@@ -12,22 +12,21 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "funding_opportunities")
 public class FundingOpportunities  implements Serializable{
-	//public class FundingOpportunities extends AuditModel implements Serializable{
-
-	public FundingOpportunities(Long id, String location, String funder, String organisation) {
+	public FundingOpportunities(Long id, String location, String funder, String organisation, String contact) {
 		super();
 		this.id = id;
 		this.location = location;
 		this.funder = funder;
 		this.organisation = organisation;
+		this.contact = contact;
 	}
+
+	//public class FundingOpportunities extends AuditModel implements Serializable{
 
 	public FundingOpportunities() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-	
 
 	/**
 	 * 
@@ -48,6 +47,10 @@ public class FundingOpportunities  implements Serializable{
 	
 	@Column(name = "organisation")
 	private String organisation;
+	
+	@Column(name = "contact")
+	private String contact;
+	
 
 	public Long getId() {
 		return id;
@@ -83,6 +86,14 @@ public class FundingOpportunities  implements Serializable{
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+
+	public String getContact() {
+		return contact;
+	}
+
+	public void setContact(String contact) {
+		this.contact = contact;
 	}
 	
 }

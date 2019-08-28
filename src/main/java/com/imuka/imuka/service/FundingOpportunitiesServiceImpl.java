@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.imuka.imuka.dao.FundingOpportunitiesDaoImpl;
@@ -58,6 +59,12 @@ public class FundingOpportunitiesServiceImpl implements ImukaService<FundingOppo
 	@Override
 	public Page<FundingOpportunities> findPaginated(int page, int size) {
 		return fn.findAll(new PageRequest(page, size));
+	}
+
+	@Override
+	public Page<FundingOpportunities> findAllProductsPageable(Pageable pageable) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	

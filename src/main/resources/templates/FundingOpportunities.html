@@ -25,8 +25,8 @@
                        <!--  <fieldset class="w3-container w3-padding-64">  -->
             <div  class="w3-container w3-padding-64 w3-card-4" >
               <header class="w3-container w3-black  w3-opacity">
-  <h3>Please Register Funding Opportunities Here</h3>
-  <a class="w3-green " th:href="@{/funds/fnds}">See List</a>
+  <h3>Funding Opportunities</h3>
+  <a class="w3-green w3-btn" th:href="@{/funds/fnds}">See Funding Opportunities List</a>
 </header>
                 <!-- <h2 class="w3-text-blue"> Please Log In</h2>
                  -->
@@ -35,12 +35,15 @@
                 
                         <h3 id="error"></h3>
                        <label class="w3-label w3-text-blue">Funder</label> 
-                       <input type="text" class="w3-input w3-border"  th:field="*{funder}"  id="funder" >
+                       <input type="text" class="w3-input w3-hover-border-teal"  th:field="*{funder}" placeholder="e.g Government" id="funder" >
                      <label class="w3-label w3-text-blue">Location</label> 
-                       <input type="text" class="w3-input w3-border"  th:field="*{location}" placeholder="e.g Kampala"  id="location">
+                       <input type="text" class="w3-input w3-hover-border-teal"  th:field="*{location}" placeholder="e.g Kampala"  id="location">
                      
                      <label class="w3-label w3-text-blue">Organisation</label>   
-             <input type="text" class="w3-input w3-border"  th:field="*{organisation}" placeholder="e.g UN"  id="organisation">
+             <input type="text" class="w3-input w3-hover-border-teal"  th:field="*{organisation}" placeholder="e.g UN"  id="organisation">
+         
+                     <label class="w3-label w3-text-blue">Contact</label>   
+             <input type="tel" class="w3-input w3-hover-border-teal"  th:field="*{contact}" placeholder="e.g UN"  id="organisation">
          
                       
                   <p>          
@@ -50,6 +53,6 @@
  
                   </div> 
   
-      <th:block th:include="/fragment/footer"></th:block>  
+      <th:block th:include="/fragment/_footer"></th:block>  
  </body>
 </html>

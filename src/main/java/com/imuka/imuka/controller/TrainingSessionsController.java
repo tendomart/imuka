@@ -42,6 +42,7 @@ public class TrainingSessionsController extends BaseController<TrainingSessionsC
 	@PostMapping(value = "/")
 	public ModelAndView addItem(@Valid TrainingSessions ts, BindingResult result, ModelAndView md, RedirectAttributes red) {
 		if (result.hasErrors()) {
+			md.addObject("result",result);
 			md.setViewName("403");
             return md;
         }
