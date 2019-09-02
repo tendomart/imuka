@@ -14,13 +14,17 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.web.multipart.MultipartFile;
 
 @Entity
 @Table(name = "events")
 
 public class Events implements Serializable{
+
+
+
 public Events(Long id, String event_name, String location, String topic, String facilitator, String fee,
-			byte[] image, String start_date, String contact) {
+			byte[] image,  String start_date, String contact) {
 		super();
 		this.id = id;
 		this.event_name = event_name;
@@ -29,6 +33,7 @@ public Events(Long id, String event_name, String location, String topic, String 
 		this.facilitator = facilitator;
 		this.fee = fee;
 		this.image = image;
+	//	this.pic = pic;
 		this.start_date = start_date;
 		this.contact = contact;
 	}
@@ -75,10 +80,13 @@ public Events() {
 	
 	@Column(name = "fee")
 	private String fee;
-	
+	// think you can convert byte array to base64 string then display it.image = Base64.getEncoder().encode(image); and in view < img th:src="*{'data:image/png;base64,'+image}" alt="" />
 	@Lob
 	@Column(name = "Image", length = Integer.MAX_VALUE, nullable = true)
 	private byte[] image;
+	
+	//@Column(name = "pic")
+	//private MultipartFile pic;
 
 	//@DateTimeFormat(pattern = "MM-dd-yyyy")
 	//@Column(name = "start_date")
@@ -186,6 +194,16 @@ public Events() {
 	public void setContact(String contact) {
 		this.contact = contact;
 	}
+
+
+	//public MultipartFile getPic() {
+	//	return pic;
+	//}
+
+
+//	public void setPic(MultipartFile pic) {
+	//	this.pic = pic;
+	//}
 
 
 		

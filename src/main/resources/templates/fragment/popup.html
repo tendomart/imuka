@@ -1,3 +1,4 @@
+
 <div id="popup_container"  th:fragment="popup">
     <!-- <button onclick="hideBox();">
         hey
@@ -25,7 +26,7 @@
                     <header>
                         <a>Complete To Proceed</a>
                     </header>
-                    <form action="">
+                    <form action="#" th:action="@{/anonynm/}" th:object="${anonynmousGuest}" method="post">
                         <table>
                         <tr>
                             <td  class="table_colm">
@@ -34,14 +35,14 @@
                                 </label>
                             </td>
                             <td class="table_colm">
-                                <select name="" id="" required>
-                                    <option value="">
+                                <select name="" id="" th:field="*{district}" required>
+                                    <option value="Kibaale">
                                         Kibaale
                                     </option>
-                                    <option value="">
+                                    <option value="Bundibugyo">
                                         Bundibugyo
                                     </option>
-                                    <option value="">
+                                    <option value="Masaka">
                                         Masaka
                                     </option>
                                    
@@ -56,11 +57,11 @@
                                 </label>
                             </td>
                             <td>
-                                <select name="" id="" required>
-                                    <option value="">
+                                <select name="" id="" th:field="*{gender}" required>
+                                    <option value="Female">
                                         Female
                                     </option>
-                                    <option value="">
+                                    <option value="Male">
                                         Male
                                     </option>
                                 </select>
@@ -73,26 +74,26 @@
                                </label>
                             </td>
                             <td class="table_colm">
-                                <select name="" id="" required>
-                                    <option value="">
+                                <select name="" id="" th:field="*{job}" required>
+                                    <option value="Select occupation">
                                         Select occupation
                                     </option>
-                                    <option value="">
+                                    <option value="Farmer">
                                         Farmer
                                     </option>
-                                    <option value="">
+                                    <option value="Plumber">
                                         Plumber
                                     </option>
-                                    <option value="">
+                                    <option value="Business Owner">
                                         Business Owner
                                     </option>
-                                    <option value="">
+                                    <option value="Doctor">
                                         Doctor
                                     </option>
-                                    <option value="">
+                                    <option value="Carpenter">
                                         Carpenter
                                     </option>
-                                    <option value="">
+                                    <option value="Teacher">
                                         Teacher
                                     </option>
                                 </select>
@@ -105,20 +106,20 @@
                                 </label>
                             </td>
                             <td>
-                                <select name="" id="" required>
-                                    <option value="">
+                                <select name="" id="" th:field="*{interest}" required>
+                                    <option value="Diary farming">
                                         Diary farming
                                     </option>
-                                    <option value="">
+                                    <option value="Marketing and Sales">
                                         Marketing and Sales
                                     </option>
-                                    <option value="">
+                                    <option value="food processing">
                                         food processing
                                     </option>
-                                    <option value="">
+                                    <option value="coffee farming">
                                         coffee farming
                                     </option>
-                                    <option value="">
+                                    <option value="hoticulture">
                                         hoticulture
                                     </option>
                                 </select>
@@ -131,11 +132,11 @@
                                 </label>
                             </td>
                             <td class="table_colm">
-                                <select name="" id="" required>
+                                <select name="" id="" th:field="*{country}" required>
                                     <option value="">
                                         ....
                                     </option>
-                                    <option value="">
+                                    <option value="UGANDA">
                                         UGANDA
                                     </option>
                                    

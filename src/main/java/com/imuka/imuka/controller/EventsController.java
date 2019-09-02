@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -47,9 +49,8 @@ public class EventsController extends BaseController<Events>{
 				md.setViewName("Home");
 				return md;
 				}
-			@Override
 			@PostMapping(value = "/")
-			public ModelAndView addItem(@Valid Events ev, BindingResult result, ModelAndView md, RedirectAttributes red) {
+			public ModelAndView addItem(@Valid Events ev,@RequestParam MultipartFile file, BindingResult result, ModelAndView md, RedirectAttributes red) {
 				if (result.hasErrors()) {
 					md.addObject("result",result);
 					md.setViewName("403");
@@ -58,6 +59,7 @@ public class EventsController extends BaseController<Events>{
 				//
 				//super.parseDate()
 		        evt.addItem(ev);
+		        md.addObject("pic", file);
 		        md.addObject("events",new Events());
 		        md.setViewName("Events");
 		        red.addFlashAttribute("message", "Success");

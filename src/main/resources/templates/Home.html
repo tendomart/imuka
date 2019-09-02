@@ -332,7 +332,7 @@
       </div>
   </section>
   <!-- deals section -->
-  <header class="heading_container deals_heading">
+  <header class="heading_container deals_heading" >
 
  <a>DEALS OF THE DAY</a>
               
@@ -353,88 +353,12 @@
 </div>
 
   <section class="deals_container">
-     
-      <div class="colm1">
-          <header class="image_container">
-             
-          </header>
-          <div class="logo_container">
-              <img src="img/P.jpg" alt="">
-          </div>
-          <div class="company_name">
-              <a>Koldec inc</a>
-          </div>
-          <div>
-              <p>Annual startups Seminar</p>
-              
-          </div>
-          <footer class="card_footer">
-            <a href="" class="button">REGISTER</a>
-            </footer>
-      </div>
-      <div class="colm2">
-            <header class="image_container">
-             
-                </header>
-                <div class="logo_container">
-                    <img src="img/p.jpg" alt="">
-                </div>
-                <div class="company_name">
-                    <a>loyde group</a>
-                </div>
-                <div>
-                    <p>Auctioning Dinner</p>
-                    
-                </div>
-                <footer class="card_footer">
-                    <a href="" class="button">REGISTER</a>
-                    </footer>
-            </div>
-        
-  
-  
-     
-        <div class="colm1">
-                <header class="image_container">
-             
-               </header>
-                    <div class="logo_container">
-                        <img src="img/p.jpg" alt="">
-                    </div>
-                    <div class="company_name">
-                        <a>chepov corporation</a>
-                    </div>
-                    <div>
-                        <p>coffee exporters conference</p>
-                        
-                    </div>
-                    <footer class="card_footer">
-                    <a href="" class="button">REGISTER</a>
-                    </footer>
-                </div>
-        
-        <div class="colm2">
-                <header class="image_container">
-             
-                    </header>
-                    <div class="logo_container">
-                        <img src="img/p.jpg" alt="">
-                    </div>
-                    <div class="company_name">
-                        <a>stanbic Bank</a>
-                    </div>
-                    <div class="deal_description">
-                        <p>Financial Training</p>
-                       
-                    </div>
-                    <footer class="card_footer">
-                        <a href="" class="button">REGISTER</a>
-                        </footer>
-                </div>
-          
-    </section>
+     <!-- INSERT DEALS FRAGMENT -->
+  <div th:replace="/fragment/deals :: deals"/>
+ 
+        </section>
     <!-- funding opportunities section -->
-  <div class="heading_container funding_header events_header" id="fundingOpportunities">
+  <div class="heading_container funding_header events_header" id="events">
       <a>
           UPCOMING EVENTS
       </a>
@@ -462,14 +386,14 @@
   <div>  <div th:replace="/fragment/events_fragment :: events_fragment"/></div>
  
   <!-- WORKSHOPS -->
-  <div class="heading_container funding_header" id="Events">
+  <div class="heading_container funding_header" id="workshops">
         <a>
             WORKSHOPS
         </a>
     </div>
     <div class="more_container">
           
-          <a class="" href="workshops.html">
+          <a class="" href="/imuka/wks">
           see more   
          
               
@@ -495,7 +419,7 @@
     </div>
     <div class="more_container">
           
-            <a class="" href="">
+            <a class="" href="/imuka/vst">
             see more   
            
                 
@@ -523,7 +447,7 @@
         </div>
         <div class="more_container">
               
-                <a class="" href="">
+                <a class="" href="/imuka/trn">
                 see more   
                
                     
@@ -547,7 +471,7 @@
             </div>
             <div class="more_container">
                   
-                    <a class="" href="">
+                    <a class="" href="/imuka/fnd">
                     see more   
                    
                         
