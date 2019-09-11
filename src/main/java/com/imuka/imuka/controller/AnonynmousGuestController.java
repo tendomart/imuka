@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -40,7 +41,7 @@ public class AnonynmousGuestController extends BaseController<AnonynmousGuest>{
 			}
 		@Override
 		@PostMapping(value = "/")
-		public ModelAndView addItem(@Valid AnonynmousGuest an, BindingResult result, ModelAndView md, RedirectAttributes red) {
+		public ModelAndView addItem(@ModelAttribute  @Valid AnonynmousGuest an, BindingResult result, ModelAndView md, RedirectAttributes red) {
 			//red.addFlashAttribute("message", "Failed");
 		    //red.addFlashAttribute("alertClass", "alert-danger");
 			if (result.hasErrors()) {
@@ -48,7 +49,8 @@ public class AnonynmousGuestController extends BaseController<AnonynmousGuest>{
 	            return md;
 	        }
 	        anon.addItem(an);
-	        md.addObject("anonynmousGuest",new AnonynmousGuest());
+	        log.info("Saved Guest ...");
+	        md.addObject("anonynmousGuest",an);
 	        md.setViewName("Home");
 		    red.addFlashAttribute("message", "Success");
 	        red.addFlashAttribute("alertClass", "alert-success");

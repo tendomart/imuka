@@ -8,14 +8,14 @@ import org.springframework.web.servlet.ModelAndView;
 import com.imuka.imuka.model.AnonynmousGuest;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4000/")
+//@CrossOrigin(origins = "http://localhost:4000/")
 public class AdminLoginRestController {
 
-	@GetMapping(value = "/r")
+	@GetMapping(value = "/")
 	//@Override
 	public ModelAndView getForm(ModelAndView md) {
 	 //md.addObject("anonynmousGuest",new AnonynmousGuest());
-	md.setViewName("index");
+	md.setViewName("swagger-ui.html");
 	return md;
 	}
 }

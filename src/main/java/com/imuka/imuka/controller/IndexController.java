@@ -40,7 +40,7 @@ public class IndexController {
        this.wk=wk;
     }
 	
-			@GetMapping(value = "/")
+			//@GetMapping(value = "/")
 				//@Override
 				public ModelAndView getForm(@RequestParam("page") Optional<Integer> page,ModelAndView md ) {
 				  // Evaluate page. If requested parameter is null or less than 0 (to
@@ -78,7 +78,7 @@ public class IndexController {
 				return md;
 				}
 			
-			@GetMapping(value = "/home")
+			//@GetMapping(value = "/home")
 			//@Override
 			public ModelAndView getHome(ModelAndView md) {
 					md.setViewName("index");

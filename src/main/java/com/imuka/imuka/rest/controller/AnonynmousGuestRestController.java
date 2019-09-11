@@ -32,8 +32,11 @@ import com.imuka.imuka.dao.AnonynmousGuestDaoImpl;
 import com.imuka.imuka.model.AnonynmousGuest;
 import com.imuka.imuka.service.ImukaService;
 
+import io.swagger.annotations.Api;
+
 @RestController
 @RequestMapping(value="/rs")
+@Api(value="Guest", description="Anonynmous Guest API")
 public class AnonynmousGuestRestController {
 	@Autowired(required = true)
 	@Qualifier(value = "anonynmousGuestServiceImpl")

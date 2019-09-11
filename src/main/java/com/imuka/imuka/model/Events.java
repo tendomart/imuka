@@ -1,8 +1,6 @@
 package com.imuka.imuka.model;
 
 import java.io.Serializable;
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,18 +8,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-
-import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.web.multipart.MultipartFile;
-
 @Entity
 @Table(name = "events")
-
 public class Events implements Serializable{
-
-
 
 public Events(Long id, String event_name, String location, String topic, String facilitator, String fee,
 			byte[] image,  String start_date, String contact) {
@@ -44,16 +33,7 @@ public Events() {
 		// TODO Auto-generated constructor stub
 	}
 
-
-
-
-
 //	public class Events extends AuditModel implements Serializable{
-
-	
-
-
-	
 
 
 	/**
